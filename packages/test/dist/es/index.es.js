@@ -14,11 +14,11 @@ Test.propTypes = {
   /** on click event handler */
   onClick: PropTypes.func,
 
-  /**  Button type */
+  /**  Button type22 */
   variant: PropTypes.oneOf(['success', 'normal', 'warning', 'alert'])
 };
 Test.defaultProps = {
-  variant: 'normal'
+  variant: 'success'
 };
 
 export default Test;

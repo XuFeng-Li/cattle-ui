@@ -1,9 +1,9 @@
-
+'use strict';
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var React = _interopDefault(require('./node_modules/react'));
-var PropTypes = _interopDefault(require('./node_modules/prop-types'));
+var React = _interopDefault(require('react'));
+var PropTypes = _interopDefault(require('prop-types'));
 
 var Test = function Test() {
   return React.createElement("div", null, "123456");
@@ -18,11 +18,11 @@ Test.propTypes = {
   /** on click event handler */
   onClick: PropTypes.func,
 
-  /**  Button type */
+  /**  Button type22 */
   variant: PropTypes.oneOf(['success', 'normal', 'warning', 'alert'])
 };
 Test.defaultProps = {
-  variant: 'normal'
+  variant: 'success'
 };
 
 module.exports = Test;

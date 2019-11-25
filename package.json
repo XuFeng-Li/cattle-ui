@@ -44,6 +44,7 @@
     "@svgr/rollup": "^4.3.3",
     "babelrc-rollup": "^3.0.0",
     "lerna": "^3.18.4",
+    "prop-types": "^15.7.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
