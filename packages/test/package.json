@@ -1,0 +1,14 @@
+{
+  "name": "Test",
+  "version": "0.0.1",
+  "description": "'打包测试'",
+  "main": "dist/es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c ../../rollup.config.js",
+    "rollup": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "ffe6f89e0ebf888a06a004b7e6c821a28e4d9415"
+}
