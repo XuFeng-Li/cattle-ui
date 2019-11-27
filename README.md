@@ -72,7 +72,7 @@ lerna bootstrap #(安装各个组件的包依赖)
 lerna run build #(使用lerna和rollup为各个组件打包)
 
 ### 运行步骤
-npm run start
+yarn 安装
 npm run storybook
 
 ### 发布 https://registry.npm.taobao.org/
@@ -80,9 +80,6 @@ npm config set registry https://registry.npmjs.org/
 
 npm adduser
 whoami
-
-### TODO
-rollup
-.babel
+lerna publish
 
 
