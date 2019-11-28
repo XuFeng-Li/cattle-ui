@@ -2,7 +2,7 @@
   "name": "testzlb1",
   "version": "0.0.3",
   "description": "'打包测试'",
-  "main": "dist/es/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c ../../rollup.config.js",
