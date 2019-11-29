@@ -9,7 +9,7 @@ import svgr from '@svgr/rollup';
 
 import pkg from './package.json';
 
-const externals = ['react', 'prop-types'];
+const externals = ['react', 'prop-types', 'react-dom'];
 
 export default {
     input: 'src/index.js',
@@ -29,7 +29,11 @@ export default {
     plugins: [
       external(),
       postcss({
-        modules: true
+        modules: true,
+        exec: true,
+        use : [
+          ['less', { javascriptEnabled: true }]
+        ],
       }),
       url(),
       svgr(),

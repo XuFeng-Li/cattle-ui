@@ -2,15 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Test from '../index';
-import ButtonReadme from '../README.md';
-import ButtonUsage from '../USAGE.md';
+import Readme from '../README.md';
+import Usage from '../USAGE.md';
 
 storiesOf('Button', module)
   .addParameters({
     readme: {
       codeTheme: 'duotone-sea',
-      content: ButtonReadme,
-      sidebar: ButtonUsage,
+      content: Readme,
+      sidebar: Usage,
     },
   })
   .add('Button', () => <Test label={'Hello Im Button'} />)
