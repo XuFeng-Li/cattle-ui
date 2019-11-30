@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 
 // Export a function. Accept the base config as the only param.
 module.exports = async ({ config, mode }) => {
@@ -17,7 +18,11 @@ module.exports = async ({ config, mode }) => {
     }],
     include: path.resolve(__dirname, '../'),
   });
-
+  config.plugins.push(
+    new webpack.ProvidePlugin({
+      React: 'react'
+    })
+  );
   // Return the altered config
   return config;
 };

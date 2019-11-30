@@ -9,7 +9,7 @@ import svgr from '@svgr/rollup';
 
 import pkg from './package.json';
 
-const externals = ['react', 'prop-types', 'react-dom'];
+const externals = ['react', 'prop-types', 'react-dom', 'antd'];
 
 export default {
     input: 'src/index.js',
@@ -45,3 +45,9 @@ export default {
       commonjs()
     ]
   };
+
+  // {
+  //   'namedExports': {
+  //     'dist/main.js': ['__moduleExports']
+  //   }
+  // }

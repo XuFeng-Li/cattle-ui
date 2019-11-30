@@ -13,5 +13,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "ffe6f89e0ebf888a06a004b7e6c821a28e4d9415"
+  "gitHead": "ffe6f89e0ebf888a06a004b7e6c821a28e4d9415",
+  "dependencies": {
+    "cattle-util": "^1.0.0"
+  }
 }

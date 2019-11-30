@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'antd/es/date-picker';
+import { mapToObject } from 'cattle-util';
 import 'antd/es/date-picker/style';
 require('./style.less');
 
+function showInfo() {
+  alert(123, mapToObject([{id: 3, value: 66}], 'id'))
+  console.log(mapToObject([{id: 3, value: 66}], 'id'));
+}
 
 const Test = () => {
-    return <div className='test'><DatePicker/> 12345689899</div>
+    return <div className='test' onClick={() => { showInfo() }}><DatePicker/> 12345689899</div>
 };
 
 Test.propTypes = {
