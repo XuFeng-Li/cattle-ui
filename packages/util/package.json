@@ -11,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "gitHead": "ffe6f89e0ebf888a06a004b7e6c821a28e4d9415",
-  "devDependencies": {},
   "dependencies": {
     "mathjs": "^6.2.5",
     "qs": "^6.9.1"
