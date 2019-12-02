@@ -18335,11 +18335,8 @@ function _nonIterableRest$1() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
-var css$5 = "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */\n/* stylelint-disable no-duplicate-selectors */\n/* stylelint-disable */\n/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */\n";
+var css$5 = "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */\n/* stylelint-disable no-duplicate-selectors */\n/* stylelint-disable */\n/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */\n.index_ant-message__224Tq {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  color: rgba(0, 0, 0, 0.65);\n  font-size: 14px;\n  font-variant: tabular-nums;\n  line-height: 1.5;\n  list-style: none;\n  font-feature-settings: 'tnum';\n  position: fixed;\n  top: 16px;\n  left: 0;\n  z-index: 1010;\n  width: 100%;\n  pointer-events: none;\n}\n.index_ant-message-notice__3DLLN {\n  padding: 8px;\n  text-align: center;\n}\n.index_ant-message-notice__3DLLN:first-child {\n  margin-top: -8px;\n}\n.index_ant-message-notice-content__1nPmF {\n  display: inline-block;\n  padding: 10px 16px;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n  pointer-events: all;\n}\n.index_ant-message-success__3zxNi .index_anticon__3RrGK {\n  color: #52c41a;\n}\n.index_ant-message-error__221fd .index_anticon__3RrGK {\n  color: #f5222d;\n}\n.index_ant-message-warning__3K3P0 .index_anticon__3RrGK {\n  color: #faad14;\n}\n.index_ant-message-info__21IV1 .index_anticon__3RrGK,\n.index_ant-message-loading__2W_N7 .index_anticon__3RrGK {\n  color: #1890ff;\n}\n.index_ant-message__224Tq .index_anticon__3RrGK {\n  position: relative;\n  top: 1px;\n  margin-right: 8px;\n  font-size: 16px;\n}\n.index_ant-message-notice__3DLLN.index_move-up-leave__1T5cC.index_move-up-leave-active__3VD9p {\n  overflow: hidden;\n  animation-name: index_MessageMoveOut__2cXx8;\n  animation-duration: 0.3s;\n}\n@keyframes index_MessageMoveOut__2cXx8 {\n  0% {\n    max-height: 150px;\n    padding: 8px;\n    opacity: 1;\n  }\n  100% {\n    max-height: 0;\n    padding: 0;\n    opacity: 0;\n  }\n}\n";
 styleInject(css$5);
-
-var css$6 = "/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */\n/* stylelint-disable no-duplicate-selectors */\n/* stylelint-disable */\n/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */\n.index_ant-message__224Tq {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  color: rgba(0, 0, 0, 0.65);\n  font-size: 14px;\n  font-variant: tabular-nums;\n  line-height: 1.5;\n  list-style: none;\n  font-feature-settings: 'tnum';\n  position: fixed;\n  top: 16px;\n  left: 0;\n  z-index: 1010;\n  width: 100%;\n  pointer-events: none;\n}\n.index_ant-message-notice__3DLLN {\n  padding: 8px;\n  text-align: center;\n}\n.index_ant-message-notice__3DLLN:first-child {\n  margin-top: -8px;\n}\n.index_ant-message-notice-content__1nPmF {\n  display: inline-block;\n  padding: 10px 16px;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n  pointer-events: all;\n}\n.index_ant-message-success__3zxNi .index_anticon__3RrGK {\n  color: #52c41a;\n}\n.index_ant-message-error__221fd .index_anticon__3RrGK {\n  color: #f5222d;\n}\n.index_ant-message-warning__3K3P0 .index_anticon__3RrGK {\n  color: #faad14;\n}\n.index_ant-message-info__21IV1 .index_anticon__3RrGK,\n.index_ant-message-loading__2W_N7 .index_anticon__3RrGK {\n  color: #1890ff;\n}\n.index_ant-message__224Tq .index_anticon__3RrGK {\n  position: relative;\n  top: 1px;\n  margin-right: 8px;\n  font-size: 16px;\n}\n.index_ant-message-notice__3DLLN.index_move-up-leave__1T5cC.index_move-up-leave-active__3VD9p {\n  overflow: hidden;\n  animation-name: index_MessageMoveOut__2cXx8;\n  animation-duration: 0.3s;\n}\n@keyframes index_MessageMoveOut__2cXx8 {\n  0% {\n    max-height: 150px;\n    padding: 8px;\n    opacity: 1;\n  }\n  100% {\n    max-height: 0;\n    padding: 0;\n    opacity: 0;\n  }\n}\n";
-styleInject(css$6);
 
 /**
  * Safe chained function
@@ -21137,9 +21134,7 @@ function (_Component) {
       var loading = filesList.filter(function (ele) {
         return ele.status === 'uploading';
       }).length;
-      var renderDom = React__default.createElement("div", null, React__default.createElement(Icon$1, {
-        type: "plus"
-      }), React__default.createElement("div", {
+      var renderDom = React__default.createElement("div", null, React__default.createElement("div", {
         className: "ant-upload-text"
       }, "\u4E0A\u4F20"));
 
@@ -21233,12 +21228,7 @@ function (_Component) {
           target: "_blank",
           rel: "noopener noreferrer",
           title: "\u9884\u89C8\u6587\u4EF6"
-        }, React__default.createElement(Icon$1, {
-          style: {
-            color: 'rgba(255, 255, 255, 0.85)'
-          },
-          type: "eye"
-        }))), React__default.createElement("span", {
+        })), React__default.createElement("span", {
           className: "ant-upload-list-item-extend-actions",
           style: {
             fontSize: '12px',
@@ -21269,7 +21259,7 @@ function (_Component) {
 UploadForm.defaultProps = {
   getPolicy: null,
   getSignedUrl: null,
-  getExtendHeaders: null,
+  getExtendHeaders: function getExtendHeaders() {},
   listType: 'picture-card',
   fileType: 'img',
   type: '',

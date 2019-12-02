@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Upload, Icon, message} from 'antd';
+import { Upload, message} from 'antd';
 import {
   urlMapToFileList,
   simplifyUrlMapToFileList,
@@ -249,7 +249,7 @@ class UploadForm extends Component {
     const loading = filesList.filter(ele => ele.status === 'uploading').length;
     let renderDom = (
       <div>
-        <Icon type="plus" />
+        {/* <Icon type="plus" /> */}
         <div className="ant-upload-text">上传</div>
       </div>
     );
@@ -319,7 +319,7 @@ class UploadForm extends Component {
                   </div>
                   <span className="ant-upload-list-item-actions">
                     <a href={ele.url} target="_blank" rel="noopener noreferrer" title="预览文件">
-                      <Icon style={{ color: 'rgba(255, 255, 255, 0.85)' }} type="eye" />
+                      {/* <Icon style={{ color: 'rgba(255, 255, 255, 0.85)' }} type="eye" /> */}
                     </a>
                   </span>
                   <span
