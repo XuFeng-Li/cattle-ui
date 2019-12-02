@@ -10,7 +10,7 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "ffe6f89e0ebf888a06a004b7e6c821a28e4d9415",
+  "gitHead": "803b4eb3987f884254e6d77a46e591c4abd45f28",
   "dependencies": {
     "mathjs": "^6.2.5",
     "qs": "^6.9.1"

@@ -1,5 +1,6 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Test from '../index';
+import Upload from '../index';
 import Readme from '../README.md';
 import Usage from '../USAGE.md';
 
@@ -11,4 +12,4 @@ storiesOf('Upload', module)
       sidebar: Usage,
     },
   })
-  .add('simple', () => <Test label={'Hello Im Button'} />)
+  .add('simple', () => <Upload label={'Hello Im Button'} />)
