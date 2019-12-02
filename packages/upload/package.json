@@ -1,6 +1,6 @@
 {
   "name": "cattle-upload",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "'基於antd的上传组件'",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "803b4eb3987f884254e6d77a46e591c4abd45f28",
+  "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
     "cattle-util": "^1.0.0"
   }
