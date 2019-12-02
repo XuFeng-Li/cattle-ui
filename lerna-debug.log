@@ -1,0 +1,6 @@
+43 warn complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
+44 error Error: Command failed: git tag cattle-upload@1.0.1 -m cattle-upload@1.0.1
+44 error fatal: tag 'cattle-upload@1.0.1' already exists
+44 error
+44 error     at makeError (C:\Users\zhail\Desktop\dev\cattle-ui\node_modules\execa\index.js:174:9)
+44 error     at Promise.all.then.arr (C:\Users\zhail\Desktop\dev\cattle-ui\node_modules\execa\index.js:278:16)
