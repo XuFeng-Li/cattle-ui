@@ -1,6 +1,6 @@
 {
   "name": "cattle-upload",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "'基於antd的上传组件'",
   "main": "dist/index.js",
   "scripts": {
