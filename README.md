@@ -80,6 +80,7 @@ npm config set registry https://registry.npmjs.org/
 
 npm adduser
 whoami
-lerna publish
+lerna publish 
+lerna publish --force-publish
 
 
