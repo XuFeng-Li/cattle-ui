@@ -2258,4 +2258,3 @@ exports.numberIncludeRule = numberIncludeRule;
 exports.rangeNumberRule = rangeNumberRule;
 exports.requiredRule = requiredRule;
 exports.telphoneValidation = telphoneValidation;
-//# sourceMappingURL=index.js.map

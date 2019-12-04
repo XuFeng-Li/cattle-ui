@@ -1910,4 +1910,3 @@ exports.valuesToFileds = valuesToFileds;
 exports.wrapperByFunc = wrapperByFunc;
 exports.wrapperByKey = wrapperByKey;
 exports.yuan2fen = yuan2fen;
-//# sourceMappingURL=index.js.map

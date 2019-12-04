@@ -82,5 +82,5 @@ npm adduser
 whoami
 lerna publish 
 lerna publish --force-publish
-
+lerna add cattle-util --scope=cattle-info
 
