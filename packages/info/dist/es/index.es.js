@@ -2140,8 +2140,6 @@ var dist_64 = dist.wrapperByFunc;
 var dist_65 = dist.wrapperByKey;
 var dist_66 = dist.yuan2fen;
 
-require('./index.less');
-
 var isZero = function isZero(val) {
   return "".concat(val) === '0';
 };

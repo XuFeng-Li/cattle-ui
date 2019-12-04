@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import {isStr, simplifyFileName, trim, isFn } from 'cattle-util'
-require('./index.less');
 
 const isZero = (val) => {
   return `${val}` === '0'

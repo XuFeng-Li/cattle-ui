@@ -83,4 +83,4 @@ whoami
 lerna publish 
 lerna publish --force-publish
 lerna add cattle-util --scope=cattle-info
-
+lerna run build --scope=cattle-info
