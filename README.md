@@ -81,6 +81,6 @@ npm config set registry https://registry.npmjs.org/
 npm adduser
 whoami
 lerna publish 
-lerna publish --force-publish
+lerna publish --force-publish cattle-info
 lerna add cattle-util --scope=cattle-info
 lerna run build --scope=cattle-info
