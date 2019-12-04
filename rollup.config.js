@@ -48,6 +48,6 @@ export default {
 
   // {
   //   'namedExports': {
-  //     'dist/main.js': ['__moduleExports']
+  //     'dist/index.js': ['__moduleExports']
   //   }
   // }

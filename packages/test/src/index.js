@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'antd/es/date-picker';
 import { mapToObject } from 'cattle-util';
+import Upload from 'cattle-upload';
 import 'antd/es/date-picker/style';
+// import { Upload } from 'antd';
 require('./style.less');
 
 function showInfo() {
@@ -11,7 +13,12 @@ function showInfo() {
 }
 
 const Test = () => {
-    return <div className='test' onClick={() => { showInfo() }}><DatePicker/> 12345689899</div>
+    return (
+      <div className='test' onClick={() => { showInfo() }}>
+        <Upload />
+        <DatePicker/> 
+        12345689899
+      </div>)
 };
 
 Test.propTypes = {
