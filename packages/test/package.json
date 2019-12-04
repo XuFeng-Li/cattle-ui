@@ -1,6 +1,6 @@
 {
   "name": "testzlb1",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "'打包测试'",
   "main": "dist/index.js",
   "scripts": {
