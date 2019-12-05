@@ -6,6 +6,8 @@
   "module": "dist/es/index.es.js",
   "dependencies": {
     "antd": "^3.25.3",
+    "cattle-info": "^1.0.1",
+    "cattle-upload": "^1.0.4-alpha.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"

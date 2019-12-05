@@ -18,12 +18,12 @@ export default {
       {
         file: pkg.main,
         format: 'cjs', // 输出文件格式为CommentJS
-        // sourcemap: true
+        sourcemap: true
       },
       {
         file: pkg.module,
         format: 'es',
-        // sourcemap: true
+        sourcemap: true
       }
     ],
     plugins: [

@@ -2240,3 +2240,4 @@ var isVideoByUrl = function isVideoByUrl(url) {
 };
 
 export { checkNoChinaChar, checkNum, checkNumberOrABC, decimalRule, getNumberRuleMessage, isImageByUrl, isVideoByUrl, maxlenRule, numberExcludeZeroRule, numberIncludeRule, rangeNumberRule, requiredRule, telphoneValidation };
+//# sourceMappingURL=index.es.js.map
