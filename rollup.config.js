@@ -9,7 +9,7 @@ import svgr from '@svgr/rollup';
 
 import pkg from './package.json';
 
-const externals = ['react', 'prop-types', 'react-dom', 'antd'];
+const externals = [...Object.keys(pkg.peerDependencies)];
 
 export default {
     input: 'src/index.js',
@@ -18,7 +18,7 @@ export default {
       {
         file: pkg.main,
         format: 'cjs', // 输出文件格式为CommentJS
-        sourcemap: true
+        sourcemap: true,
       },
       {
         file: pkg.module,

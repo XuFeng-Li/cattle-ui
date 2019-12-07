@@ -13,5 +13,11 @@
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
     "cattle-util": "^1.0.1"
+  },
+  "peerDependencies": {
+    "antd": "^3.35.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }

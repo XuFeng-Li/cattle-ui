@@ -13,6 +13,7 @@
   "gitHead": "803b4eb3987f884254e6d77a46e591c4abd45f28",
   "dependencies": {
     "cattle-upload": "^1.0.4",
-    "cattle-util": "^1.0.1"
+    "cattle-util": "^1.0.1",
+    "test-ts-zlb": "^0.0.1"
   }
 }

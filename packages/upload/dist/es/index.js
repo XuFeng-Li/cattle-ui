@@ -1,13 +1,8 @@
-'use strict';
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-require('antd/es/upload/style');
-var _Upload = _interopDefault(require('antd/es/upload'));
-require('antd/es/message/style');
-var _message = _interopDefault(require('antd/es/message'));
-var React = require('react');
-var React__default = _interopDefault(React);
+import 'antd/es/upload/style';
+import _Upload from 'antd/es/upload';
+import 'antd/es/message/style';
+import _message from 'antd/es/message';
+import React, { Fragment, Component } from 'react';
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -542,12 +537,12 @@ function (_Component) {
       var loading = filesList.filter(function (ele) {
         return ele.status === 'uploading';
       }).length;
-      var renderDom = React__default.createElement("div", null, React__default.createElement("div", {
+      var renderDom = React.createElement("div", null, React.createElement("div", {
         className: "ant-upload-text"
       }, "\u4E0A\u4F20"));
 
       if (children) {
-        renderDom = React__default.cloneElement(children, {
+        renderDom = React.cloneElement(children, {
           loading: !!loading
         });
       }
@@ -594,12 +589,12 @@ function (_Component) {
         };
       }
 
-      return React__default.createElement(React.Fragment, null, React__default.createElement("span", {
+      return React.createElement(Fragment, null, React.createElement("span", {
         className: "upload_form",
         style: {
           display: outDisplay || 'inline-block'
         }
-      }, React__default.createElement(_Upload, _extends({
+      }, React.createElement(_Upload, _extends({
         multiple: multiple,
         showUploadList: showUploadList,
         onRemove: function onRemove() {
@@ -613,42 +608,42 @@ function (_Component) {
         fileList: filesList,
         onChange: this.handleChange,
         disabled: disabled
-      }, extendProps), this.renderButton())), !showUploadList && customShow ? React__default.createElement("div", {
+      }, extendProps), this.renderButton())), !showUploadList && customShow ? React.createElement("div", {
         className: "ant-upload-list ant-upload-list-picture-card custom"
       }, filesList.map(function (ele, i) {
-        return ele.status === 'done' ? React__default.createElement("div", {
+        return ele.status === 'done' ? React.createElement("div", {
           key: -i,
           className: "ant-upload-list-item ant-upload-list-item-done"
-        }, React__default.createElement("div", {
+        }, React.createElement("div", {
           className: "ant-upload-list-item-info"
-        }, React__default.createElement("a", {
+        }, React.createElement("a", {
           className: "ant-upload-list-item-thumbnail",
           href: ele.url,
           rel: "noopener noreferrer",
           target: "_blank"
-        }, React__default.createElement("img", {
+        }, React.createElement("img", {
           src: ele.url,
           alt: ele.name
-        }))), React__default.createElement("span", {
+        }))), React.createElement("span", {
           className: "ant-upload-list-item-actions"
-        }, React__default.createElement("a", {
+        }, React.createElement("a", {
           href: ele.url,
           target: "_blank",
           rel: "noopener noreferrer",
           title: "\u9884\u89C8\u6587\u4EF6"
-        })), React__default.createElement("span", {
+        })), React.createElement("span", {
           className: "ant-upload-list-item-extend-actions",
           style: {
             fontSize: '12px',
             color: '#fff',
             zIndex: 10
           }
-        }, i === 0 ? React__default.createElement("span", null, mianPicText || '主图') : React__default.createElement("span", {
+        }, i === 0 ? React.createElement("span", null, mianPicText || '主图') : React.createElement("span", {
           onClick: function onClick() {
             _this2.setFirst(ele);
           },
           className: "pointer"
-        }, setMainPicText || '设为主图'), React__default.createElement("span", {
+        }, setMainPicText || '设为主图'), React.createElement("span", {
           style: {
             marginLeft: '8px'
           },
@@ -662,7 +657,7 @@ function (_Component) {
   }]);
 
   return UploadForm;
-}(React.Component);
+}(Component);
 
 UploadForm.defaultProps = {
   getPolicy: null,
@@ -694,4 +689,4 @@ UploadForm.defaultProps = {
 
 };
 
-module.exports = UploadForm;
+export default UploadForm;
