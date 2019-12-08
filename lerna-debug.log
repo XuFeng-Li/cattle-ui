@@ -1,4 +1,4 @@
-62 error Error: Command failed: git add -- packages/util/package.json packages/util/package-lock.json packages/test_ts/package.json packages/test_ts/package-lock.json packages/info/package.json packages/regExp/package.json packages/upload/package.json packages/test/package.json
+62 error Error: Command failed: git add -- packages/util/package.json packages/util/package-lock.json packages/test_ts/package.json packages/regExp/package.json packages/upload/package.json packages/info/package.json packages/test/package.json
 62 error fatal: Pathspec 'packages/test_ts/package.json' is in submodule 'packages/test_ts'
 62 error
 62 error     at makeError (/Users/liangbiao/dev/cattle-ui/node_modules/execa/index.js:174:9)
