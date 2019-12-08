@@ -10,7 +10,7 @@ const showMessage = (methodName, content, onClose) => {
   message[methodName](content, 1.5, onClose);
 }
 
-class UploadForm extends Component {
+export default class UploadForm extends Component {
 
   static getDerivedStateFromProps(nextProps, state) {
     if ('value' in nextProps) {
@@ -378,5 +378,3 @@ UploadForm.defaultProps = {
   multiple: false,
   getPolicyUrl: null, // !!! 后端自定义获取特殊凭证接口, 仅商品模型使用|
 };
-
-export default UploadForm;
