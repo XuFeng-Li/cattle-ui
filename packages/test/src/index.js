@@ -15,15 +15,13 @@ function showInfo() {
 }
 
 const Test = () => {
-  console.log(Ud, InputButton, typeof Ud)
-    debugger
     return (
       <div className='test' onClick={() => { showInfo() }}>
         <DatePicker/> 
         <Upload>99999</Upload>
+        <Ud theme='fill'/>
         {/* <Ud theme='fill'>99999</Ud> */}
-        {/* <Ud theme='fill'>99999</Ud> */}
-        12345689899
+        {/* 12345689899 */}
         <InputButton type='primary'/>
       </div>)
 };

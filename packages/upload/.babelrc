@@ -3,15 +3,15 @@
         [
             "@babel/preset-env",
             {
-                // "useBuiltIns": "entry", // 只编译需要编译的代码
-                // "modules": false
-                // "corejs": 3
+                "useBuiltIns": "entry", // 只编译需要编译的代码
+                "modules": false,
+                "corejs": 3
             }
         ],
         "@babel/preset-react"
     ],
     "plugins": [
-        // "@babel/plugin-external-helpers",
+        "@babel/plugin-external-helpers",
         // "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-transform-arrow-functions",
         "@babel/plugin-proposal-class-properties",

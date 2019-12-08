@@ -1,6 +1,6 @@
 {
   "name": "cattle-info",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "信息展示",
   "main": "dist/index.js",
   "scripts": {
@@ -12,6 +12,6 @@
   "license": "ISC",
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
-    "cattle-util": "^1.0.2"
+    "cattle-util": "^1.0.3"
   }
 }
