@@ -4,7 +4,7 @@ import DatePicker from 'antd/es/date-picker';
 import { mapToObject } from 'cattle-util';
 import 'antd/es/date-picker/style';
 import { Upload } from 'antd';
-// import Ud from 'cattle-upload';
+import Ud from 'cattle-upload';
 import { InputButton } from 'test-ts-zlb';
 require('./style.less');
 
@@ -18,7 +18,7 @@ const Test = () => {
       <div className='test' onClick={() => { showInfo() }}>
         <DatePicker/> 
         <Upload>99999</Upload>
-        {/* <Ud theme='fill'>99999</Ud> */}
+        <Ud theme='fill'>99999</Ud>
         {/* <Ud theme='fill'>99999</Ud> */}
         12345689899
         <InputButton type='primary'/>
