@@ -1,6 +1,6 @@
 {
   "name": "cattle-regexp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "'打包测试'",
   "main": "dist/index.js",
   "scripts": {
@@ -12,6 +12,6 @@
   "license": "ISC",
   "gitHead": "803b4eb3987f884254e6d77a46e591c4abd45f28",
   "dependencies": {
-    "cattle-util": "^1.0.4"
+    "cattle-util": "^1.0.5"
   }
 }
