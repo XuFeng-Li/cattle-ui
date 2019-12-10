@@ -8,7 +8,7 @@ import Ud from 'cattle-upload';
 import { InputButton } from 'test-ts-zlb';
 require('./style.less');
 
-console.log(Ud)
+console.log(InputButton, Ud)
 function showInfo() {
   alert(123, mapToObject([{id: 3, value: 66}], 'id'))
   console.log(mapToObject([{id: 3, value: 66}], 'id'));
@@ -19,10 +19,10 @@ const Test = () => {
       <div className='test' onClick={() => { showInfo() }}>
         <DatePicker/> 
         <Upload>99999</Upload>
-        <Ud theme='fill'/>
+        {/* <Ud theme='fill'>111</Ud> */}
         {/* <Ud theme='fill'>99999</Ud> */}
         {/* 12345689899 */}
-        <InputButton type='primary'/>
+        <InputButton type='primary'>1213</InputButton>
       </div>)
 };
 
