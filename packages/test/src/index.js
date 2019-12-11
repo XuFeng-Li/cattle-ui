@@ -19,7 +19,7 @@ const Test = () => {
       <div className='test' onClick={() => { showInfo() }}>
         <DatePicker/> 
         <Upload>99999</Upload>
-        {/* <Ud theme='fill'>111</Ud> */}
+        <Ud theme='fill'/>
         {/* <Ud theme='fill'>99999</Ud> */}
         {/* 12345689899 */}
         <InputButton type='primary'>1213</InputButton>

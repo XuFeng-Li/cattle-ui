@@ -2202,6 +2202,41 @@ var dist_64 = dist.wrapperByFunc;
 var dist_65 = dist.wrapperByKey;
 var dist_66 = dist.yuan2fen;
 
+function styleInject(css, ref) {
+  if (ref === void 0) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') {
+    return;
+  }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css = ".index_upload_form__2Oat2 {\n  color: red;\n}\n";
+var styles = {"upload_form":"index_upload_form__2Oat2"};
+styleInject(css);
+
+console.log(styles, 'styles');
+
 var showMessage = function showMessage(methodName, content, onClose) {
   _message[methodName](content, 1.5, onClose);
 };
@@ -2590,11 +2625,11 @@ function (_Component) {
       }
 
       return React__default.createElement(React.Fragment, null, React__default.createElement("span", {
-        className: "upload_form",
+        className: styles.upload_form,
         style: {
           display: outDisplay || 'inline-block'
         }
-      }, React__default.createElement(_Upload, _extends({
+      }, "\u4E0A\u4F20\u6587\u5B57", React__default.createElement(_Upload, _extends({
         multiple: multiple,
         showUploadList: showUploadList,
         onRemove: function onRemove() {

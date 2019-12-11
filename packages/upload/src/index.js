@@ -5,6 +5,9 @@ import {
   simplifyUrlMapToFileList,
   fileListTourlMap,
 } from 'cattle-util';
+import styles from './index.less';
+// require('./index.less')
+console.log(styles, 'styles')
 
 const showMessage = (methodName, content, onClose) => {
   message[methodName](content, 1.5, onClose);
@@ -284,7 +287,8 @@ export default class UploadForm extends Component {
     }
     return (
       <Fragment>
-        <span className="upload_form" style={{ display: outDisplay || 'inline-block' }}>
+        <span className={styles.upload_form} style={{ display: outDisplay || 'inline-block' }}>
+          上传文字
           <Upload
             multiple={multiple}
             showUploadList={showUploadList}

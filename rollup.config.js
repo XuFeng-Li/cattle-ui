@@ -28,7 +28,9 @@ export default {
       }
     ],
     plugins: [
-      external(),
+      external({
+        jsnext: true, // 转化为ES2015
+      }),
       postcss({
         modules: true,
         exec: true,
