@@ -11,16 +11,13 @@ function __$styleInject(css) {
 }
 
 import { createElement } from 'react';
-import { Input, Button, Upload } from 'antd';
+import { Input } from 'antd';
 
-require('./index.less');
 var InputButton = function (_a) {
-    var placeholder = _a.placeholder;
+    var placeholder = _a.placeholder, children = _a.children;
     return (createElement("div", { className: 'cattle_test_ts' },
         createElement(Input, { placeholder: placeholder }),
-        createElement(Button, null, "Submit"),
-        createElement(Upload, null, "\u4E0A\u4F20"),
-        "211"));
+        children));
 };
 
 export { InputButton };

@@ -2,15 +2,15 @@
   "name": "test-ts-zlb",
   "version": "0.0.5",
   "description": "TypeScript TEST",
-  "main": "dist/lib.js",
-  "module": "dist/lib.es.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/lib.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "rollup -c",
+    "build": "rollup -c ../../rollup.tsconfig.js",
+    "rollup": "rollup -c",
     "build:watch": "rollup -cw"
   },
   "license": "ISC",
@@ -26,5 +26,6 @@
     "antd": "^3.10.7",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
-  }
+  },
+  "dependencies": {}
 }

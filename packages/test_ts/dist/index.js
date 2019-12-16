@@ -19,14 +19,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var React = require('react');
 var antd = require('antd');
 
-require('./index.less');
 var InputButton = function (_a) {
-    var placeholder = _a.placeholder;
+    var placeholder = _a.placeholder, children = _a.children;
     return (React.createElement("div", { className: 'cattle_test_ts' },
         React.createElement(antd.Input, { placeholder: placeholder }),
-        React.createElement(antd.Button, null, "Submit"),
-        React.createElement(antd.Upload, null, "\u4E0A\u4F20"),
-        "211"));
+        children));
 };
 
 exports.InputButton = InputButton;

@@ -12,4 +12,4 @@ storiesOf('Upload', module)
       sidebar: Usage,
     },
   })
-  .add('simple', () => <Upload label={'Hello Im Button'} />)
+  .add('simple', () => <Upload>11</Upload>)
