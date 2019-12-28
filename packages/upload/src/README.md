@@ -1,4 +1,6 @@
 # Button :star:
+#### 组件实例化根据STORY标签
+<!-- STORY -->
 
 Application button.
 
@@ -7,8 +9,6 @@ import Button from 'components/Button';
 ```
 
 <!-- Brief summary of what the component is, and what it's for. -->
-
-<!-- STORY -->
 
 #### Story Source
 
@@ -20,34 +20,14 @@ The content here won't be shown in stories.
 
 <!-- STORY HIDE END -->
 
-#### Icons
-
-```js
-import Button from 'components/button';
-
-render() {
-  return (
-    <Button icon="mail">Send mail</Button>
-    <Button icon="trash">Remove</Button>
-  );
-}
-```
-
 #### Button types
 
 Means `OutlinedButton`, `ContainedButton`, `TextButton`. It is possible to import as standalone component or pass `variant` property. Defautl value is `contained`.
 
 ```js
-<Button variant="outlined" />
-<Button variant="contained" />
-<Button variant="text" />
+<Upload><Button variant="outlined" /><Upload>
+<Upload><Button variant="outlined" /><Upload>
 ```
-
-Which one does @torvalds like most?
-
-- [ ] tiger \#
-- [ ] whale \*
-- [x] octocat \!
 
 > Stay hungry; stay foolish.
 >

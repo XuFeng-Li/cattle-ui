@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import Upload from '../index';
 import Readme from '../README.md';
@@ -12,4 +12,4 @@ storiesOf('Upload', module)
       sidebar: Usage,
     },
   })
-  .add('simple', () => <Upload>11</Upload>)
+  .add('simple', () => <Fragment><Upload/></Fragment>)
