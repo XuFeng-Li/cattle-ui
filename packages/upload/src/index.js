@@ -6,8 +6,6 @@ import {
   fileListTourlMap,
 } from 'cattle-util';
 import styles from './index.less';
-// require('./index.less')
-console.log(styles, 'styles')
 
 const showMessage = (methodName, content, onClose) => {
   message[methodName](content, 1.5, onClose);

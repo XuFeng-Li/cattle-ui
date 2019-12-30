@@ -1,16 +1,19 @@
 ### :smile: Usage
 
-Buttons allow users to take actions, and make choices, with a single tap. Supports all default HTML Button properties. See Material Design Button for UI/UX information.
-
-Button variants could be imported separately.
+Input, TextArea, RangePicker, Cascader 其他属性参考 ant 官网
 
 ```js
-import {
-  SuccessButton,
-  AlertButton,
-  WarningButton,
-  AccentButton,
-} from 'Button';
+import { 
+    CtTimeRange, 
+    CtInput,
+    CtTextArea,
+    CtRangePicker,
+    CtCascader,
+    CtSelect,
+    CtUpload,
+    CtCombinInput, 
+    CtCombinSelect 
+} from 'cattle-form';
 ```
 
 <!-- PROPS -->

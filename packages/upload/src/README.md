@@ -5,7 +5,7 @@
 Application button.
 
 ```js
-import Button from 'components/Button';
+import Button from 'cattle-upload';
 ```
 
 <!-- Brief summary of what the component is, and what it's for. -->
@@ -19,15 +19,6 @@ import Button from 'components/Button';
 The content here won't be shown in stories.
 
 <!-- STORY HIDE END -->
-
-#### Button types
-
-Means `OutlinedButton`, `ContainedButton`, `TextButton`. It is possible to import as standalone component or pass `variant` property. Defautl value is `contained`.
-
-```js
-<Upload><Button variant="outlined" /><Upload>
-<Upload><Button variant="outlined" /><Upload>
-```
 
 > Stay hungry; stay foolish.
 >

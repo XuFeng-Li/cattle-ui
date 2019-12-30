@@ -12,4 +12,4 @@ storiesOf('Upload', module)
       sidebar: Usage,
     },
   })
-  .add('simple', () => <Fragment><Upload/></Fragment>)
+  .add('upload', () => <Fragment><Upload/></Fragment>)
