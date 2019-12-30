@@ -1,13 +1,43 @@
-'use strict';
+import React, { Fragment, Component } from 'react';
+import { TimePicker, Input, DatePicker, Cascader, Select, Upload, message } from 'antd';
+import moment from 'moment';
+import PropTypes from 'prop-types';
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
 
-require('antd/es/upload/style');
-var _Upload = _interopDefault(require('antd/es/upload'));
-require('antd/es/message/style');
-var _message = _interopDefault(require('antd/es/message'));
-var React = require('react');
-var React__default = _interopDefault(React);
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -129,6 +159,42 @@ function _setPrototypeOf(o, p) {
   return _setPrototypeOf(o, p);
 }
 
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -207,6 +273,95 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
+var TimeRange =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(TimeRange, _Component);
+
+  _createClass(TimeRange, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        var other = {};
+        return _objectSpread2({
+          value: nextProps.value
+        }, other);
+      }
+
+      return null;
+    }
+  }]);
+
+  function TimeRange(props) {
+    var _this;
+
+    _classCallCheck(this, TimeRange);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TimeRange).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (timeMom, timeStr, index) {
+      var _this$state$value = _this.state.value,
+          value = _this$state$value === void 0 ? [] : _this$state$value;
+      value[index] = timeStr;
+      var onChange = _this.props.onChange;
+
+      if (onChange) {
+        onChange(value);
+      } else {
+        _this.setState({});
+      }
+    });
+
+    var _value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
+
+    _this.state = {
+      value: _value
+    };
+    return _this;
+  }
+
+  _createClass(TimeRange, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          _this$props$format = _this$props.format,
+          format = _this$props$format === void 0 ? 'HH:mm:ss' : _this$props$format,
+          sT = _this$props.sT,
+          eT = _this$props.eT;
+      var _this$state$value2 = this.state.value,
+          value = _this$state$value2 === void 0 ? [] : _this$state$value2;
+
+      var _value2 = _slicedToArray(value, 2),
+          _value2$ = _value2[0],
+          startTime = _value2$ === void 0 ? sT : _value2$,
+          _value2$2 = _value2[1],
+          endTime = _value2$2 === void 0 ? eT : _value2$2;
+
+      return React.createElement(Fragment, null, React.createElement(TimePicker, {
+        onChange: function onChange(timeMom, timeStr) {
+          _this2.handleChange(timeMom, timeStr, 0);
+        },
+        format: format,
+        defaultValue: startTime ? moment(startTime, format) : null
+      }), React.createElement("span", {
+        style: {
+          padding: '4px'
+        }
+      }, "--"), React.createElement(TimePicker, {
+        onChange: function onChange(timeMom, timeStr) {
+          _this2.handleChange(timeMom, timeStr, 1);
+        },
+        format: format,
+        defaultValue: endTime ? moment(endTime, format) : null
+      }));
+    }
+  }]);
+
+  return TimeRange;
+}(Component);
+
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 }
@@ -225,7 +380,7 @@ function _interopDefault(ex) {
   return ex && typeof ex === 'object' && 'default' in ex ? ex['default'] : ex;
 }
 
-var React = _interopDefault(React__default);
+var React$1 = _interopDefault(React);
 
 function _typeof(obj) {
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
@@ -1221,7 +1376,7 @@ function formatWan(val) {
 
   if (val > 10000) {
     result = Math.floor(val / 10000);
-    result = React.createElement("span", null, result, React.createElement("span", {
+    result = React$1.createElement("span", null, result, React$1.createElement("span", {
       style: {
         position: 'relative',
         top: -2,
@@ -1903,7 +2058,7 @@ var dateSplit = function dateSplit(data, noTime) {
       da = _data$split2[0],
       time = _data$split2[1];
 
-  return noTime ? React.createElement("span", null, da) : React.createElement("span", null, da, React.createElement("br", null), time);
+  return noTime ? React$1.createElement("span", null, da) : React$1.createElement("span", null, da, React$1.createElement("br", null), time);
 };
 
 var strSplit = function strSplit(str, number) {
@@ -2202,43 +2357,665 @@ var dist_64 = dist.wrapperByFunc;
 var dist_65 = dist.wrapperByKey;
 var dist_66 = dist.yuan2fen;
 
-function styleInject(css, ref) {
-  if (ref === void 0) ref = {};
-  var insertAt = ref.insertAt;
+// 注：临时解决受控table里面input改变重新渲染后input失去焦点的问题, 
 
-  if (!css || typeof document === 'undefined') {
-    return;
-  }
+var CsInput =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CsInput, _Component);
 
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.type = 'text/css';
+  _createClass(CsInput, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        return {
+          value: nextProps.value
+        };
+      }
 
-  if (insertAt === 'top') {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
+      return null;
     }
-  } else {
-    head.appendChild(style);
+  }]);
+
+  function CsInput(props) {
+    var _this;
+
+    _classCallCheck(this, CsInput);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CsInput).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (value) {
+      var _this$props = _this.props,
+          onChange = _this$props.onChange,
+          noTrim = _this$props.noTrim,
+          type = _this$props.type;
+      var tValue = value;
+
+      if (noTrim) {
+        tValue = value;
+      } else {
+        tValue = dist_58(value);
+      } // 正整数
+
+
+      if (type === 'd') {
+        tValue = tValue.replace(/[^\d]/g, '');
+      }
+
+      if (onChange) {
+        onChange(tValue);
+      }
+
+      _this.setState({
+        value: tValue
+      });
+    });
+
+    var _value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
+
+    _this.state = {
+      value: _value
+    };
+    return _this;
+  } // eslint-disable-next-line react/sort-comp
+
+
+  _createClass(CsInput, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props2 = this.props,
+          noTrim = _this$props2.noTrim,
+          className = _this$props2.className,
+          others = _objectWithoutProperties(_this$props2, ["noTrim", "className"]);
+
+      var value = this.state.value;
+      return React.createElement(Input, _extends({
+        className: className,
+        value: value
+      }, others, {
+        onChange: function onChange(e) {
+          _this2.handleChange(e.target.value);
+        }
+      }));
+    }
+  }]);
+
+  return CsInput;
+}(Component);
+
+var TextArea = Input.TextArea;
+
+var CsTextArea =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CsTextArea, _Component);
+
+  _createClass(CsTextArea, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        return {
+          value: nextProps.value
+        };
+      }
+
+      return null;
+    }
+  }]);
+
+  function CsTextArea(props) {
+    var _this;
+
+    _classCallCheck(this, CsTextArea);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CsTextArea).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (value) {
+      var _this$props = _this.props,
+          onChange = _this$props.onChange,
+          noTrim = _this$props.noTrim;
+      var tValue = value;
+
+      if (noTrim) {
+        tValue = value;
+      } else {
+        tValue = dist_8(value);
+      }
+
+      if (onChange) {
+        onChange(tValue);
+      }
+
+      _this.setState({
+        value: tValue
+      });
+    });
+
+    var _value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
+
+    _this.state = {
+      value: _value
+    };
+    return _this;
+  } // eslint-disable-next-line react/sort-comp
+
+
+  _createClass(CsTextArea, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props2 = this.props,
+          noTrim = _this$props2.noTrim,
+          className = _this$props2.className,
+          others = _objectWithoutProperties(_this$props2, ["noTrim", "className"]);
+
+      var value = this.state.value;
+      return React.createElement(TextArea, _extends({
+        className: className,
+        value: value
+      }, others, {
+        onChange: function onChange(e) {
+          _this2.handleChange(e.target.value);
+        }
+      }));
+    }
+  }]);
+
+  return CsTextArea;
+}(Component);
+
+var RangePicker = DatePicker.RangePicker; // moment(null, 'HH:mm:ss')
+
+var CsRangePicker =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CsRangePicker, _Component);
+
+  _createClass(CsRangePicker, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        var other = {};
+        return _objectSpread2({
+          value: nextProps.value
+        }, other);
+      }
+
+      return null;
+    }
+  }]);
+
+  function CsRangePicker(props) {
+    var _this;
+
+    _classCallCheck(this, CsRangePicker);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CsRangePicker).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (time) {
+      var _time = _slicedToArray(time, 2),
+          sM = _time[0],
+          eM = _time[1];
+
+      var _this$props = _this.props,
+          onChange = _this$props.onChange,
+          format = _this$props.format;
+
+      if (onChange) {
+        onChange(sM && eM && [sM.format(format), eM.format(format)]);
+      } else {
+        _this.setState({});
+      }
+    });
+
+    var value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
+    _this.state = {
+      value: value
+    };
+    return _this;
   }
 
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
+  _createClass(CsRangePicker, [{
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          sT = _this$props2.sT,
+          eT = _this$props2.eT,
+          format = _this$props2.format,
+          rest = _objectWithoutProperties(_this$props2, ["sT", "eT", "format"]);
+
+      var _this$state$value = this.state.value,
+          value = _this$state$value === void 0 ? [] : _this$state$value;
+
+      var _value = _slicedToArray(value, 2),
+          _value$ = _value[0],
+          startTime = _value$ === void 0 ? sT : _value$,
+          _value$2 = _value[1],
+          endTime = _value$2 === void 0 ? eT : _value$2;
+
+      var valueArr = null;
+
+      if (startTime && endTime) {
+        valueArr = [moment(startTime, format), moment(endTime, format)];
+      }
+
+      return React.createElement(Fragment, null, React.createElement(RangePicker, _extends({}, rest, {
+        value: valueArr,
+        format: format,
+        onChange: this.handleChange
+      })));
+    }
+  }]);
+
+  return CsRangePicker;
+}(Component); // HH:mm:ss
+
+
+CsRangePicker.defaultProps = {
+  format: 'YYYY-MM-DD'
+};
+CsRangePicker.propTypes = {
+  format: PropTypes.string
+};
+
+var SvCascader =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SvCascader, _Component);
+
+  _createClass(SvCascader, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        var other = {};
+        return _objectSpread2({
+          value: state.value
+        }, other);
+      }
+
+      return null;
+    }
+  }]);
+
+  function SvCascader(props) {
+    var _this;
+
+    _classCallCheck(this, SvCascader);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SvCascader).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (value) {
+      var onChange = _this.props.onChange;
+
+      if (onChange) {
+        onChange(value);
+      }
+
+      _this.setState({
+        value: value
+      });
+    });
+
+    _this.fetchData = _this.fetchData.bind(_assertThisInitialized(_this));
+
+    var _value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
+
+    _this.state = {
+      value: _value,
+      list: props.options || []
+    };
+    return _this;
   }
-}
 
-var css = ".index_upload_form__2Oat2 {\n  color: red;\n}\n";
-var styles = {"upload_form":"index_upload_form__2Oat2"};
-styleInject(css);
+  _createClass(SvCascader, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.fetchData();
+    }
+  }, {
+    key: "fetchData",
+    value: function () {
+      var _fetchData = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee() {
+        var data,
+            _this$props,
+            _this$props$fetchServ,
+            fetchServer,
+            afterFetch,
+            params,
+            options,
+            response,
+            result,
+            list,
+            _args = arguments;
 
-console.log(styles, 'styles');
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                data = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};
+                _this$props = this.props, _this$props$fetchServ = _this$props.fetchServer, fetchServer = _this$props$fetchServ === void 0 ? function () {} : _this$props$fetchServ, afterFetch = _this$props.afterFetch, params = _this$props.params, options = _this$props.options;
+
+                if (!(dist_33(options) && !options.length)) {
+                  _context.next = 4;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 4:
+                if (dist_37(fetchServer)) {
+                  _context.next = 6;
+                  break;
+                }
+
+                return _context.abrupt("return", false);
+
+              case 6:
+                _context.next = 8;
+                return fetchServer(_objectSpread2({}, params, {}, data));
+
+              case 8:
+                response = _context.sent;
+
+                if (!(!response || !response.success)) {
+                  _context.next = 11;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 11:
+                result = response.result;
+                list = dist_37(afterFetch) ? afterFetch(result) : result;
+                this.setState({
+                  list: list
+                });
+
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function fetchData() {
+        return _fetchData.apply(this, arguments);
+      }
+
+      return fetchData;
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          _this$props2$fieldNam = _this$props2.fieldNames,
+          fieldNames = _this$props2$fieldNam === void 0 ? {
+        label: 'name',
+        value: 'id',
+        children: 'list'
+      } : _this$props2$fieldNam,
+          className = _this$props2.className,
+          params = _this$props2.params,
+          others = _objectWithoutProperties(_this$props2, ["fieldNames", "className", "params"]);
+
+      var _this$state = this.state,
+          value = _this$state.value,
+          list = _this$state.list;
+      return React.createElement(Cascader, _extends({
+        allowClear: true,
+        className: className,
+        value: value,
+        fieldNames: fieldNames,
+        showSearch: true,
+        placeholder: "\u8BF7\u9009\u62E9"
+      }, others, {
+        options: list,
+        onChange: this.handleChange
+      }));
+    }
+  }]);
+
+  return SvCascader;
+}(Component);
+
+_defineProperty(SvCascader, "defaultProps", {});
+
+var SearchSelect =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SearchSelect, _Component);
+
+  _createClass(SearchSelect, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        var other = {};
+        return _objectSpread2({
+          value: state.value
+        }, other);
+      }
+
+      return null;
+    }
+  }]);
+
+  function SearchSelect(props) {
+    var _this;
+
+    _classCallCheck(this, SearchSelect);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SearchSelect).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", function (value) {
+      var onChange = _this.props.onChange;
+
+      if (onChange) {
+        onChange(value);
+      }
+
+      _this.setState({
+        value: value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleSearch", function (value) {
+      var _this$props = _this.props,
+          _this$props$searchKey = _this$props.searchKey,
+          searchKey = _this$props$searchKey === void 0 ? 'name' : _this$props$searchKey,
+          onSearch = _this$props.onSearch,
+          loadOnce = _this$props.loadOnce;
+      !loadOnce && _this.fetchData(_defineProperty({}, searchKey, value));
+
+      if (dist_37(onSearch)) {
+        onSearch();
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "getFieldStr", function (key) {
+      var _this$props$fieldName = _this.props.fieldNames,
+          fieldNames = _this$props$fieldName === void 0 ? {} : _this$props$fieldName;
+      if (key === 'value') return fieldNames.value || 'value';
+      if (key === 'label') return fieldNames.label || 'label';
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "listAccumulate", function () {
+      var newList = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var _this$state$list = _this.state.list,
+          list = _this$state$list === void 0 ? [] : _this$state$list;
+
+      var valueKey = _this.getFieldStr('value');
+
+      var listMap = dist_49(list, valueKey);
+
+      if (dist_33(newList)) {
+        newList.forEach(function (ele) {
+          var value = ele[valueKey];
+          if (listMap[value]) delete listMap[value];
+        });
+        return newList.concat(Object.values(listMap));
+      }
+
+      return list;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "getItemLabel", function (item) {
+      var label = _this.getFieldStr('label');
+
+      var labelList = label.split('/');
+
+      if (labelList.length > 1) {
+        var value1 = item[labelList[0]] || '--';
+        var value2 = item[labelList[1]] || '--';
+        return "".concat(value1, "/").concat(value2);
+      }
+
+      return item[label] || item.name;
+    });
+
+    _this.fetchData = _this.fetchData.bind(_assertThisInitialized(_this));
+
+    var _value = typeof props.value === 'undefined' ? props.defaultValue : props.value;
+
+    _this.state = {
+      value: _value,
+      list: props.options || []
+    };
+    return _this;
+  }
+
+  _createClass(SearchSelect, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.fetchData();
+    }
+  }, {
+    key: "fetchData",
+    value: function () {
+      var _fetchData = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee() {
+        var data,
+            _this$props2,
+            fetchServer,
+            afterFetch,
+            params,
+            options,
+            response,
+            result,
+            list,
+            _args = arguments;
+
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                data = _args.length > 0 && _args[0] !== undefined ? _args[0] : {};
+                _this$props2 = this.props, fetchServer = _this$props2.fetchServer, afterFetch = _this$props2.afterFetch, params = _this$props2.params, options = _this$props2.options;
+
+                if (!(dist_33(options) && !options.length)) {
+                  _context.next = 4;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 4:
+                if (dist_37(fetchServer)) {
+                  _context.next = 6;
+                  break;
+                }
+
+                return _context.abrupt("return", false);
+
+              case 6:
+                _context.next = 8;
+                return fetchServer(_objectSpread2({}, params, {}, data));
+
+              case 8:
+                response = _context.sent;
+
+                if (!(!response || !response.success)) {
+                  _context.next = 11;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 11:
+                result = response.result;
+                list = dist_37(afterFetch) ? afterFetch(result) : result;
+                list = this.listAccumulate(list);
+                this.setState({
+                  list: list
+                });
+
+              case 15:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function fetchData() {
+        return _fetchData.apply(this, arguments);
+      }
+
+      return fetchData;
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props3 = this.props,
+          _this$props3$fieldNam = _this$props3.fieldNames,
+          fieldNames = _this$props3$fieldNam === void 0 ? {
+        label: 'label',
+        value: 'value'
+      } : _this$props3$fieldNam,
+          className = _this$props3.className,
+          params = _this$props3.params,
+          others = _objectWithoutProperties(_this$props3, ["fieldNames", "className", "params"]);
+
+      var _this$state = this.state,
+          value = _this$state.value,
+          list = _this$state.list;
+      var children = list.map(function (item) {
+        return React.createElement(Select.Option, {
+          key: item[fieldNames.value],
+          value: item[fieldNames.value]
+        }, _this2.getItemLabel(item));
+      });
+      return React.createElement(Select, _extends({
+        allowClear: true,
+        className: className,
+        value: value,
+        optionFilterProp: "children",
+        showSearch: true,
+        placeholder: "\u8BF7\u9009\u62E9"
+      }, others, {
+        onChange: this.handleChange,
+        onSearch: this.handleSearch
+      }), children);
+    }
+  }]);
+
+  return SearchSelect;
+}(Component);
+
+_defineProperty(SearchSelect, "defaultProps", {
+  loadOnce: false
+});
 
 var showMessage = function showMessage(methodName, content, onClose) {
-  _message[methodName](content, 1.5, onClose);
+  message[methodName](content, 1.5, onClose);
 };
 
 var UploadForm =
@@ -2572,12 +3349,12 @@ function (_Component) {
       var loading = filesList.filter(function (ele) {
         return ele.status === 'uploading';
       }).length;
-      var renderDom = React__default.createElement("div", null, React__default.createElement("div", {
+      var renderDom = React.createElement("div", null, React.createElement("div", {
         className: "ant-upload-text"
       }, "\u4E0A\u4F20"));
 
       if (children) {
-        renderDom = React__default.cloneElement(children, {
+        renderDom = React.cloneElement(children, {
           loading: !!loading
         });
       }
@@ -2624,12 +3401,11 @@ function (_Component) {
         };
       }
 
-      return React__default.createElement(React.Fragment, null, React__default.createElement("span", {
-        className: styles.upload_form,
+      return React.createElement(Fragment, null, React.createElement("span", {
         style: {
           display: outDisplay || 'inline-block'
         }
-      }, "\u4E0A\u4F20\u6587\u5B57", React__default.createElement(_Upload, _extends({
+      }, "\u4E0A\u4F20\u6587\u5B57", React.createElement(Upload, _extends({
         multiple: multiple,
         showUploadList: showUploadList,
         onRemove: function onRemove() {
@@ -2643,42 +3419,42 @@ function (_Component) {
         fileList: filesList,
         onChange: this.handleChange,
         disabled: disabled
-      }, extendProps), this.renderButton())), !showUploadList && customShow ? React__default.createElement("div", {
+      }, extendProps), this.renderButton())), !showUploadList && customShow ? React.createElement("div", {
         className: "ant-upload-list ant-upload-list-picture-card custom"
       }, filesList.map(function (ele, i) {
-        return ele.status === 'done' ? React__default.createElement("div", {
+        return ele.status === 'done' ? React.createElement("div", {
           key: -i,
           className: "ant-upload-list-item ant-upload-list-item-done"
-        }, React__default.createElement("div", {
+        }, React.createElement("div", {
           className: "ant-upload-list-item-info"
-        }, React__default.createElement("a", {
+        }, React.createElement("a", {
           className: "ant-upload-list-item-thumbnail",
           href: ele.url,
           rel: "noopener noreferrer",
           target: "_blank"
-        }, React__default.createElement("img", {
+        }, React.createElement("img", {
           src: ele.url,
           alt: ele.name
-        }))), React__default.createElement("span", {
+        }))), React.createElement("span", {
           className: "ant-upload-list-item-actions"
-        }, React__default.createElement("a", {
+        }, React.createElement("a", {
           href: ele.url,
           target: "_blank",
           rel: "noopener noreferrer",
           title: "\u9884\u89C8\u6587\u4EF6"
-        })), React__default.createElement("span", {
+        })), React.createElement("span", {
           className: "ant-upload-list-item-extend-actions",
           style: {
             fontSize: '12px',
             color: '#fff',
             zIndex: 10
           }
-        }, i === 0 ? React__default.createElement("span", null, mianPicText || '主图') : React__default.createElement("span", {
+        }, i === 0 ? React.createElement("span", null, mianPicText || '主图') : React.createElement("span", {
           onClick: function onClick() {
             _this2.setFirst(ele);
           },
           className: "pointer"
-        }, setMainPicText || '设为主图'), React__default.createElement("span", {
+        }, setMainPicText || '设为主图'), React.createElement("span", {
           style: {
             marginLeft: '8px'
           },
@@ -2692,7 +3468,7 @@ function (_Component) {
   }]);
 
   return UploadForm;
-}(React.Component);
+}(Component);
 UploadForm.defaultProps = {
   getPolicy: null,
   getSignedUrl: null,
@@ -2723,5 +3499,180 @@ UploadForm.defaultProps = {
 
 };
 
-module.exports = UploadForm;
-//# sourceMappingURL=index.js.map
+var CombinInput =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CombinInput, _Component);
+
+  _createClass(CombinInput, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        var propsValue = nextProps.value || {};
+        return {
+          value: _objectSpread2({}, propsValue)
+        };
+      }
+
+      return null;
+    }
+  }]);
+
+  function CombinInput(props) {
+    var _this;
+
+    _classCallCheck(this, CombinInput);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CombinInput).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "inputChange", function (obj) {
+      var value = _this.state.value;
+      var onChange = _this.props.onChange;
+
+      var extendValue = _objectSpread2({}, value, {}, obj);
+
+      if (onChange) {
+        onChange(extendValue);
+      } else {
+        _this.setState(extendValue);
+      }
+    });
+
+    _this.state = {
+      value: {
+        roomNum: '',
+        livingRoomNum: ''
+      }
+    };
+    return _this;
+  }
+
+  _createClass(CombinInput, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          disabled = _this$props.disabled,
+          width = _this$props.width,
+          _this$props$setting = _this$props.setting,
+          setting = _this$props$setting === void 0 ? [] : _this$props$setting;
+      var value = this.state.value;
+      return React.createElement("div", {
+        className: "HouseTypeSelect"
+      }, setting.map(function (ele, i) {
+        var name = ele.name,
+            label = ele.label;
+        return React.createElement(Fragment, {
+          key: -i
+        }, React.createElement(Input, {
+          placeholder: "\u8BF7\u8F93\u5165",
+          value: value[name],
+          disabled: !!disabled,
+          style: {
+            width: width || '40%'
+          },
+          onChange: function onChange(e) {
+            _this2.inputChange(_defineProperty({}, name, e.target.value));
+          }
+        }), "\xA0", label, "\xA0\xA0");
+      }));
+    }
+  }]);
+
+  return CombinInput;
+}(Component);
+
+var Option = Select.Option;
+
+var CombinSelect =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CombinSelect, _Component);
+
+  _createClass(CombinSelect, null, [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, state) {
+      if ('value' in nextProps) {
+        var propsValue = nextProps.value || {};
+        return {
+          value: _objectSpread2({}, propsValue)
+        };
+      }
+
+      return null;
+    }
+  }]);
+
+  function CombinSelect(props) {
+    var _this;
+
+    _classCallCheck(this, CombinSelect);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CombinSelect).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "selectChange", function (obj) {
+      var value = _this.state.value;
+      var onChange = _this.props.onChange;
+
+      var extendValue = _objectSpread2({}, value, {}, obj);
+
+      if (onChange) {
+        onChange(extendValue);
+      } else {
+        _this.setState(extendValue);
+      }
+    });
+
+    _this.state = {
+      value: {
+        roomNum: '',
+        livingRoomNum: ''
+      }
+    };
+    return _this;
+  }
+
+  _createClass(CombinSelect, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          disabled = _this$props.disabled,
+          width = _this$props.width,
+          _this$props$setting = _this$props.setting,
+          setting = _this$props$setting === void 0 ? [] : _this$props$setting;
+      var value = this.state.value;
+      return React.createElement("div", {
+        className: "HouseTypeSelect"
+      }, setting.map(function (ele, i) {
+        var name = ele.name,
+            label = ele.label,
+            options = ele.options;
+        return React.createElement(Fragment, {
+          key: -i
+        }, React.createElement(Select, {
+          disabled: disabled,
+          value: value[name],
+          onChange: function onChange(val) {
+            _this2.selectChange(_defineProperty({}, name, val));
+          },
+          style: {
+            width: width || '40%'
+          }
+        }, options.map(function (op, k) {
+          return React.createElement(Option, {
+            key: -k,
+            value: op.value
+          }, op.label || op.value);
+        })), "\xA0", label, "\xA0\xA0");
+      }));
+    }
+  }]);
+
+  return CombinSelect;
+}(Component);
+
+export { SvCascader as CtCascader, CombinInput as CtCombinInput, CombinSelect as CtCombinSelect, CsInput as CtInput, CsRangePicker as CtRangePicker, SearchSelect as CtSelect, CsTextArea as CtTextArea, TimeRange as CtTimeRange, UploadForm as CtUpload };
+//# sourceMappingURL=index.es.js.map

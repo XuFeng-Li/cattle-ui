@@ -85,3 +85,5 @@ lerna publish --force-publish cattle-info
 lerna add cattle-util --scope=cattle-info
 lerna run build --scope=cattle-info
 lerna bootstrap
+
+ npm install xx --save-peer --registry=https://registry.npm.taobao.org  

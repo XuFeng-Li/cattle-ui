@@ -20,7 +20,7 @@ module.exports = async ({ config, mode }) => {
   });
   config.plugins.push(
     new webpack.ProvidePlugin({
-      React: 'react'
+      React: 'react',
     })
   );
   // Return the altered config
