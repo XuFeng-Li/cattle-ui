@@ -12,7 +12,7 @@ storiesOf('Form', module)
       sidebar: Usage,
     },
   })
-  .add('CtTimeRange', () => <Fragment><CtTimeRange/></Fragment>)
+  .add('CtTimeRange', () => <Fragment><CtTimeRange/>121313</Fragment>)
   .add('CtInput', () => <Fragment><CtInput/></Fragment>)
   .add('CtTextArea', () => <Fragment><CtTextArea/></Fragment>)
   .add('CtRangePicker', () => <Fragment><CtRangePicker/></Fragment>)

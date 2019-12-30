@@ -87,3 +87,8 @@ lerna run build --scope=cattle-info
 lerna bootstrap
 
  npm install xx --save-peer --registry=https://registry.npm.taobao.org  
+
+
+ ### question 
+ 1、.gitignore无效问题
+    git rm -r --cached dist

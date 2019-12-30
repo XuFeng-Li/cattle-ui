@@ -18,7 +18,7 @@ export default {
     output: [
       {
         file: pkg.main,
-        format: 'cjs', // 输出文件格式为CommentJS
+        format: 'cjs', // 输出文件格式为CommonJS
         sourcemap: true,
       },
       {
