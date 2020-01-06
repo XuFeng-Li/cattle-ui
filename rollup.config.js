@@ -11,7 +11,6 @@ import pkg from './package.json';
 
 const externals = [...Object.keys(pkg.peerDependencies)];
 
-console.log(pkg, externals)
 export default {
     input: 'src/index.js',
     external: externals,
