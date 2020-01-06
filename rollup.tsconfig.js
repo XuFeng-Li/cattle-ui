@@ -5,8 +5,6 @@ import less from 'rollup-plugin-less';
 
 import pkg from './package.json'
 
-console.log(pkg)
-
 const tsImportPluginFactory = require("ts-import-plugin");
 
 const tsImportPlugin = tsImportPluginFactory({

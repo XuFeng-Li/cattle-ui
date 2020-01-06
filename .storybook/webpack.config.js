@@ -18,6 +18,13 @@ module.exports = async ({ config, mode }) => {
     }],
     include: path.resolve(__dirname, '../'),
   });
+  config.module.rules.push({
+    test: /\.tsx?$/i,
+    use: [{
+      loader: 'ts-loader'
+    }],
+    include: path.resolve(__dirname, '../'),
+  });
   config.plugins.push(
     new webpack.ProvidePlugin({
       React: 'react',
