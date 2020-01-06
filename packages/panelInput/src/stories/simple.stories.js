@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import UInput from '../index';
+import PanelInput from '../index';
 import Readme from '../README.md';
 import Usage from '../USAGE.md';
 
-storiesOf('UInput', module)
+storiesOf('PanelInput', module)
   .addParameters({
     readme: {
       codeTheme: 'duotone-sea',
@@ -12,4 +12,4 @@ storiesOf('UInput', module)
       sidebar: Usage,
     },
   })
-  .add('simple', () => <UInput placeholder="simple" />)
+  .add('simple', () => <PanelInput placeholder="simple" />)

@@ -1,5 +1,5 @@
 {
-  "name": "@cattle/uInput",
+  "name": "@cattle/panelInput",
   "version": "0.0.1",
   "description": "参数化面板uform的input标签",
   "main": "dist/index.js",
