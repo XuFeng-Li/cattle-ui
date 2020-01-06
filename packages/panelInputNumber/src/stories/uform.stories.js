@@ -4,21 +4,21 @@ import { trim, beforeTrim } from "cattle-util";
 import { SchemaForm, mapStyledProps, mapTextComponent } from "@uform/antd";
 import "antd/dist/antd.css";
 import { storiesOf } from "@storybook/react";
-import PanelInput from "../index";
+import PanelInputNumber from "../index";
 import Readme from "../README.md";
 import Usage from "../USAGE.md";
 
 // 正常为 'string'
 registerFormField(
-  "PanelInput",
+  "PanelInputNumber",
   connect({
     getProps: (outputProps, fieldProps) => {
-     
+      
     },
-  })(PanelInput)
+  })(PanelInputNumber)
 );
 
-storiesOf("PanelInput", module)
+storiesOf("PanelInputNumber", module)
   .addParameters({
     readme: {
       codeTheme: "duotone-sea",
@@ -36,7 +36,7 @@ storiesOf("PanelInput", module)
           properties: {
             length: {
               type: "string",
-              "x-component": "PanelInput",
+              "x-component": "PanelInputNumber",
               "x-props": {
                 "addonBefore": '平方米',
                 "addonAfter": '平方米',

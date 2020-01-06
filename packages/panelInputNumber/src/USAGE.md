@@ -3,7 +3,7 @@
 正常的组件使用方式
 
 ```js
-import PanelInput from 'cattle/PanelInput';
+import PanelInputNumber from 'cattle/PanelInputNumber';
 ```
 
 基于 uForm使用
@@ -12,12 +12,12 @@ import PanelInput from 'cattle/PanelInput';
 // 注册组件（此处的全局注册）
 
 registerFormField(
-  "PanelInput",
+  "PanelInputNumber",
   connect({
     getProps: (outputProps, fieldProps) => {
       
     },
-  })(PanelInput)
+  })(PanelInputNumber)
 );
 ```
 
