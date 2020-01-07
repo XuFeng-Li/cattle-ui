@@ -1,0 +1,20 @@
+.addon__container {
+  display: flex;
+
+  .addon__before {
+    padding: 0 5px;
+    flex: 0 0 auto;
+  }
+  .addon__after {
+    padding: 0 5px;
+    flex: 0 0 auto;
+  }
+  .addon__self {
+    width: 100%;
+    :global {
+      .ant-input-number {
+        width: 100%;
+      }
+    }
+  }
+}
