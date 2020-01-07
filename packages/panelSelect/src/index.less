@@ -1,0 +1,20 @@
+.panelform__select {
+  display: flex;
+
+  .select__before {
+    padding: 0 5px;
+    flex: 0 0 auto;
+  }
+  .select__after {
+    padding: 0 5px;
+    flex: 0 0 auto;
+  }
+  .select__self {
+    width: 100%;
+    :global {
+      .ant-select {
+        width: 100%;
+      }
+    }
+  }
+}
