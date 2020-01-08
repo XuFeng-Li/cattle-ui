@@ -33,11 +33,13 @@ storiesOf('PanelForm', module)
         },
         width: {
           type: "string",
-          "x-component": "PanelInputNumber",
-          // "x-props": {
-          //   labelCol: 4,
-          //   wrapperCol: 10
-          // },
+          "x-component": "radio",
+          enum: [
+            "1",
+            "2",
+            "3",
+            "4",
+          ],
           "x-component-props": {
             "addonBefore": '平方米',
             "addonAfter": '平方米',
@@ -62,6 +64,51 @@ storiesOf('PanelForm', module)
           },
           title: "选择"
         }, 
+        putie: {
+          type: "string",
+          enum: [
+            {
+              key: 1,
+              value: 'BM-XT-SM-0004',
+              name: '瓷砖',
+              img: 'https://img.asman.com.cn/assets/1567159387205_15543.png'
+            },
+            {
+              key: 2,
+              value: 'BM-XT-SM-0003',
+              name: '木地板',
+              img: 'https://img.asman.com.cn/assets/1567159401605_51882.png'
+            },
+            {
+              key: 3,
+              value: 'BM-XT-SM-0010',
+              name: '大理石',
+              img: 'https://img.asman.com.cn/assets/1567159401568_64748.png'
+            },
+            {
+              key: 4,
+              value: 'BM-XT-SM-0011',
+              name: '大理石',
+              img: 'https://img.asman.com.cn/assets/1567159401568_64748.png'
+            }
+          ],
+          "x-component": "PanelImgRadio",
+          title: "铺贴方式"
+        }, 
+        hasHot: {
+          type: "boolean",
+          "x-component": "PanelSwitch",
+          // "x-props": {
+          //   labelCol: 4,
+          //   wrapperCol: 10
+          // },
+          title: "是否有地暖"
+        }, 
+        startPoint: {
+          type: "string",
+          "x-component": "PanelSudoku",
+          title: "起铺点"
+        },
       }
     }}/>
   })

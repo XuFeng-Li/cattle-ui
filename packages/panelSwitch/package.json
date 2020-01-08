@@ -1,0 +1,17 @@
+{
+  "name": "@cattle/panelCheckbox",
+  "version": "0.0.1",
+  "description": "参数化面板uform的checkbox标签",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c ../../rollup.config.js",
+    "rollup": "rollup -c"
+  },
+  "author": "xiachi",
+  "license": "ISC",
+  "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
+  "dependencies": {
+    "cattle-util": "^1.0.5"
+  }
+}
