@@ -8,14 +8,24 @@ module.exports = async ({ config, mode }) => {
   // 'PRODUCTION' is used when building the static version of storybook.
 
   // Make whatever fine-grained changes you need
+  // config.module.rules.push({
+  //   test: /\.less$/,
+  //   use: ['style-loader', 'css-loader', {
+  //       loader: 'less-loader',
+  //       options: {
+  //           javascriptEnabled: true
+  //       }
+  //   }],
+  //   include: path.resolve(__dirname, '../'),
+  // });
   config.module.rules.push({
     test: /\.less$/,
-    use: ['style-loader', 'css-loader', {
-        loader: 'less-loader',
-        options: {
-            javascriptEnabled: true
-        }
-    }],
+    use: [
+      'style-loader',
+      { loader: 'css-loader', options: { modules: true, importLoaders: 1 } },
+      { loader: 'less-loader', options: { javascriptEnabled: true } },
+      // 'postcss-loader'
+    ],
     include: path.resolve(__dirname, '../'),
   });
   config.module.rules.push({

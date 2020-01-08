@@ -1,12 +1,18 @@
 import * as React from 'react';
 import { Input, Button , Upload} from 'antd';
+// import styles from './index.less';
+import styles from 'index.less';
+const styles = require('./index.less')
+// console.log(styles, 'styles');
+
 interface InputButtonProps {
   placeholder: string,
   children: any
 }
 
+//className={styles.cattle_test_ts}
 const InputButton = ({placeholder, children}: InputButtonProps) => (
-  <div className='cattle_test_ts'>
+  <div className={styles.cattle_test_ts}>
     <Input placeholder={placeholder} />
     {children}
   </div>
