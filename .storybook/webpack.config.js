@@ -21,7 +21,6 @@ module.exports = async ({ config, mode }) => {
   config.module.rules.push({
     test: /\.less$/,
     use: [
-<<<<<<< HEAD
       "style-loader",
       {
         loader: "css-loader",
@@ -40,14 +39,6 @@ module.exports = async ({ config, mode }) => {
       }
     ],
     include: path.resolve(__dirname, "../")
-=======
-      'style-loader',
-      { loader: 'css-loader', options: { modules: true, importLoaders: 1 } },
-      { loader: 'less-loader', options: { javascriptEnabled: true } },
-      // 'postcss-loader'
-    ],
-    include: path.resolve(__dirname, '../'),
->>>>>>> 3e6df031db7b1adca1390fd63adede42e66ff54d
   });
   config.module.rules.push({
     test: /\.tsx?$/i,
