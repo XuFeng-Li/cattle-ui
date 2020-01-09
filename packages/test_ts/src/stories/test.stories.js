@@ -13,4 +13,4 @@ storiesOf('Test_ts', module)
       sidebar: Usage,
     },
   })
-  .add('Button', () => <InputButton label={'Hello Im Button'} />)
+  .add('Button', () => <InputButton label={'Hello Im Button'}>1221</InputButton>)

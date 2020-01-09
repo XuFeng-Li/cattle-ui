@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### 项目特性说明
 - 支持 js 和 ts 开发
+- ts支持 CSS module  (2020.1.9) 
+
+### 稳定组件列表 (待完善)
+
 
 ### 安装node_modules
 
@@ -47,4 +51,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. dependencies, devDependencies, peerDependencies 对应安安装参数
    - npm install xx --save | --save-dev | --save-peer 
 4. 如果运行出错，可能要删掉node_modules重新安装
+
+5. ts 中引入 .less不识别问题
+   - 新增 typss/index.d.ts文件
+   - tsconfig.json 中 include 配置识别 typss/index.d.ts
 
