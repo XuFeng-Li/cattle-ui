@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2'
 import resolve from 'rollup-plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import less from 'rollup-plugin-less';
+import postcss from 'rollup-plugin-postcss';
 
 import pkg from './package.json'
 
@@ -33,6 +34,13 @@ export default {
     resolve({
       jsnext: true,
     }),
+    postcss({
+      modules: true,
+      exec: true,
+      use : [
+        ['less', { javascriptEnabled: true }]
+      ],
+    }),
     // babel({
     //   exclude: 'node_modules/**', // only transpile our source code
     // }),
@@ -43,14 +51,15 @@ export default {
         before: [tsImportPlugin]
       }),
     }),
-    less({
-      insert: "true",
-      options: {
-        javascriptEnabled: true,
-        modifyVars: { //Ant design style overrides
-          "@primary-color": "#BADA55"
-        }
-      }
-    }),
+
+    // less({
+    //   insert: "true",
+    //   options: {
+    //     javascriptEnabled: true,
+    //     modifyVars: { //Ant design style overrides
+    //       "@primary-color": "#BADA55"
+    //     }
+    //   }
+    // }),
   ]
 }

@@ -9,5 +9,8 @@
     "lib": ["es5", "es6", "dom"],
     "jsx": "react"
   },
-  "include": ["src/**/*"]
+  "include": [
+    "./src/typss/index.d.ts",
+    "./src/**/*"
+  ]
 }
