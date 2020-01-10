@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "参数化面板uform的input标签",
   "main": "dist/index.js",
+  "module": "dist/es/index.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c ../../rollup.config.js",
@@ -13,5 +14,14 @@
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
     "cattle-util": "^1.0.5"
+  },
+  "peerDependencies": {
+    "@uform/antd": "^1.0.0-rc.0",
+    "@uform/react": "^1.0.0-rc.0",
+    "antd": "^3.35.3",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }

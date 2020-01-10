@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { SchemaForm, mapStyledProps, mapTextComponent } from "@uform/antd";
+import { SchemaForm, Submit, mapStyledProps, mapTextComponent } from "@uform/antd";
 // import './registryComps'
 import styles from "./index.less";
 
@@ -12,7 +12,9 @@ const PanelForm = (props) => {
       labelCol={4}
       wrapperCol={16}
       schema={schema}
-    />
+    >
+      <Submit >修改</Submit>
+    </SchemaForm>
   );
 };
 

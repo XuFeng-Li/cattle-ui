@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from 'prop-types'
-import { isStr, simplifyFileName, trim, isFn } from "cattle-util";
+// import { isStr, simplifyFileName, trim, isFn } from "cattle-util";
 import { Input } from "antd";
 
 const PanelInput = props => {

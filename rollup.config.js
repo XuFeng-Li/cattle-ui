@@ -6,10 +6,15 @@ import resolve from 'rollup-plugin-node-resolve';
 import json from "rollup-plugin-json";
 import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
+import path from 'path';
+const cwd = process.cwd()
+const pkgPath = path.resolve(cwd, './package.json');
+const pkg = require(pkgPath)
 
-import pkg from './package.json';
-
-const externals = [...Object.keys(pkg.peerDependencies)];
+const externals = [
+  ...Object.keys(pkg.peerDependencies || {}),
+  ...Object.keys(pkg.dependencies || {}),
+];
 
 export default {
     input: 'src/index.js',
