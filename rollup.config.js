@@ -13,7 +13,7 @@ const externals = [...Object.keys(pkg.peerDependencies)];
 
 export default {
     input: 'src/index.js',
-    external: externals,
+    external: externals,  // 需要处理成外部包引用列表
     output: [
       {
         file: pkg.main,
@@ -27,8 +27,9 @@ export default {
       }
     ],
     plugins: [
-      external({
-        jsnext: true, // 转化为ES2015
+      external(), // 打包的时候排除external, 并自动将库的peerDependencies配置添加到 external 配置中;
+      resolve({
+        jsnext: true, // 表示将原来的 node 模块转化成 ES6 模块
       }),
       postcss({
         modules: true,
@@ -43,8 +44,7 @@ export default {
         exclude: 'node_modules/**', // only transpile our source code
       }),
       json(),
-      resolve(),
-      commonjs()
+      commonjs(), // 将CommonJS模块转换为ES6，以便rollup打包
     ]
   };
 
