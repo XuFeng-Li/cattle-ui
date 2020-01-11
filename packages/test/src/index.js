@@ -1,10 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from 'antd/es/date-picker';
-import { mapToObject } from 'cattle-util';
-import 'antd/es/date-picker/style';
-import { Upload } from 'antd';
-import Ud from 'cattle-upload';
 import { InputButton } from 'test-ts-zlb';
 
 const Test = () => {

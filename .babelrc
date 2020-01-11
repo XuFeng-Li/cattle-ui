@@ -3,7 +3,7 @@
         [
             "@babel/preset-env",
             {
-                "modules": false
+                "modules": false // 避免在rollup处理之前，被babel转成CommonJS格式
             }
         ],
         "@babel/preset-react"
