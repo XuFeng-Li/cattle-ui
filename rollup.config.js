@@ -8,7 +8,6 @@ import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-// import { uglify } from "rollup-plugin-uglify";
 
 import pkg from './package.json';
 

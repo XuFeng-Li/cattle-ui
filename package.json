@@ -15,7 +15,8 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
-    "rollup-plugin-typescript2": "^0.25.3"
+    "rollup-plugin-typescript2": "^0.25.3",
+    "uglify-js": "^3.7.4"
   },
   "scripts": {
     "start": "react-scripts start",

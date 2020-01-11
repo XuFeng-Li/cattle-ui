@@ -6,6 +6,9 @@ import postcss from 'rollup-plugin-postcss';
 import babel from 'rollup-plugin-babel'; // 需要使用最新JS语法，babel 转码
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
+import json from "rollup-plugin-json";
+import url from 'rollup-plugin-url';
+import svgr from '@svgr/rollup';
 import { uglify } from "rollup-plugin-uglify";
 
 import pkg from './package.json'
