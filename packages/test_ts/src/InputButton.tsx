@@ -10,6 +10,7 @@ interface InputButtonProps {
 //className={styles.cattle_test_ts}
 const InputButton = ({placeholder, children}: InputButtonProps) => (
   <div className={styles.cattle_test_ts}>
+    {/* <img src={`${noPicSrc}`} /> */}
     <Input  placeholder={placeholder} />
     {children}
   </div>

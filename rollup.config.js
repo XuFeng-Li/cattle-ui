@@ -8,6 +8,7 @@ import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
+import { terser } from "rollup-plugin-terser";
 
 import pkg from './package.json';
 
@@ -22,6 +23,7 @@ export default {
         format: 'cjs', // 输出文件格式为CommonJS
         sourcemap: true,
       },
+      { file: pkg.min, format: "cjs", plugins: [terser()] },
       {
         file: pkg.module,
         format: 'es',

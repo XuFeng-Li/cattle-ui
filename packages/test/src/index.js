@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { InputButton } from 'test-ts-zlb';
+import styles from './style.less';
 
 const Test = () => {
     return (
-      <div className='test'>
+      <div className={styles.test}>
         <InputButton type='primary'>12139998888</InputButton>
       </div>)
 };
