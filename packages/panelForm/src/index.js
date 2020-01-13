@@ -6,9 +6,10 @@ import styles from "./index.less";
 
 const PanelForm = (props) => {
   
-  const { schema } = props
+  const { schema, ...others } = props
   return (
     <SchemaForm 
+      {...others}
       labelCol={4}
       wrapperCol={16}
       schema={schema}

@@ -1,6 +1,6 @@
-# UInput:
+# PanelForm:
 
-用于 uform 的定制 input 组件: 族参数化面板需求
+动态form表单，族参数化面板需求
 
 <!-- Brief summary of what the component is, and what it's for. -->
 
