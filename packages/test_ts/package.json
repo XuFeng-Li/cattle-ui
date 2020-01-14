@@ -3,6 +3,7 @@
   "version": "0.0.5",
   "description": "TypeScript TEST",
   "main": "dist/index.js",
+  "module": "dist/es/index.es.js",
   "files": [
     "dist"
   ],
@@ -15,10 +16,13 @@
   },
   "license": "ISC",
   "devDependencies": {},
-  "peerDependencies": {
-    "antd": "^3.10.7",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "cattle-util": "^1.0.5"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "antd": "^3.35.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
 }

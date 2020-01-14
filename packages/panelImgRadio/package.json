@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "参数化面板uform的九宫格组件，用于配置起铺点",
   "main": "dist/index.js",
+  "module": "dist/es/index.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c ../../rollup.config.js",
