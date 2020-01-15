@@ -9,7 +9,6 @@
       "@babel/preset-react"
   ],
   "plugins": [
-      "@babel/plugin-external-helpers",
       "@babel/plugin-transform-arrow-functions",
       "@babel/plugin-proposal-class-properties",
       ["import", {
