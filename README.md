@@ -5,6 +5,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### 项目特性说明
 - 支持 js 和 ts 开发
 - ts支持 CSS module  (2020.1.9) 
+- 样式文件处理优化（加入autoprefixer，cssnano 插件），样式文件单处抽离 （2020.1.11）
+- 加入文件js文件压缩 (2020.1.13)
+
+### 暂不支持特性
+- 图片资源引入
 
 ### 稳定组件列表 (待完善)
 

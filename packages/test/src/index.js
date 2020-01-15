@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from 'antd/es/date-picker';
-import { mapToObject } from 'cattle-util';
-import 'antd/es/date-picker/style';
-import { Upload } from 'antd';
-import Ud from 'cattle-upload';
 import { InputButton } from 'test-ts-zlb';
+import styles from './style.less';
 
 const Test = () => {
     return (
-      <div className='test'>
+      <div className={styles.test}>
         <InputButton type='primary'>12139998888</InputButton>
       </div>)
 };

@@ -1,8 +1,13 @@
 import typescript from 'rollup-plugin-typescript2'
 import resolve from 'rollup-plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
-import less from 'rollup-plugin-less';
 import postcss from 'rollup-plugin-postcss';
+import babel from 'rollup-plugin-babel'; // 需要使用最新JS语法，babel 转码
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import json from "rollup-plugin-json";
+import url from '@rollup/plugin-url';
+import { terser } from "rollup-plugin-terser";
 
 import pkg from './package.json'
 
@@ -21,6 +26,7 @@ export default {
       file: pkg.main,
       format: 'cjs',
     },
+    { file: pkg.min, format: "cjs", plugins: [terser()] },
     {
       file: pkg.module,
       format: 'es',
@@ -37,29 +43,24 @@ export default {
     postcss({
       modules: true,
       exec: true,
+      plugins: [autoprefixer, cssnano],
+      extract: 'dist/css/bundle.css',
       use : [
         ['less', { javascriptEnabled: true }]
       ],
     }),
-    // babel({
-    //   exclude: 'node_modules/**', // only transpile our source code
-    // }),
+    babel({
+      exclude: 'node_modules/**', // only transpile our source code
+    }),
     typescript({
+      clean: true,
       typescript: require("typescript"),
       tsconfig: "tsconfig.json",
       transformers: () => ({
         before: [tsImportPlugin]
       }),
     }),
-
-    // less({
-    //   insert: "true",
-    //   options: {
-    //     javascriptEnabled: true,
-    //     modifyVars: { //Ant design style overrides
-    //       "@primary-color": "#BADA55"
-    //     }
-    //   }
-    // }),
+    json(),
+    url(),
   ]
 }
