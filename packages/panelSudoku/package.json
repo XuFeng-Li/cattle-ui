@@ -1,5 +1,5 @@
 {
-  "name": "@cattle/panelSudoku",
+  "name": "cattle-panelSudoku",
   "version": "0.0.1",
   "description": "参数化面板uform的九宫格组件，用于配置起铺点",
   "main": "dist/index.js",

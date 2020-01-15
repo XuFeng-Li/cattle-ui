@@ -1,5 +1,5 @@
 {
-  "name": "@cattle/panelInputNumber",
+  "name": "cattle-panelInputNumber",
   "version": "0.0.1",
   "description": "参数化面板uform的inputNumber组件",
   "main": "dist/index.js",

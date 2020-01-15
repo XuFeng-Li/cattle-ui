@@ -1,5 +1,5 @@
 {
-  "name": "@cattle/panelForm",
+  "name": "cattle-panelForm",
   "version": "0.0.1",
   "description": "参数化面板组件",
   "main": "dist/index.js",
@@ -15,9 +15,9 @@
   "dependencies": {
     "cattle-util": "^1.0.5",
     "prop-types": "^15.7.2",
-    "@cattle/panelInput": "^0.0.1",
-    "@cattle/panelInputNumber": "^0.0.1",
-    "@cattle/panelSelect": "^0.0.1"
+    "cattle-panelInput": "^0.0.1",
+    "cattle-panelInputNumber": "^0.0.1",
+    "cattle-panelSelect": "^0.0.1"
   },
   "peerDependencies": {
     "@uform/antd": "^1.0.0-rc.0",

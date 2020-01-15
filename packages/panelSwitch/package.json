@@ -1,5 +1,5 @@
 {
-  "name": "@cattle/panelCheckbox",
+  "name": "cattle-panelCheckbox",
   "version": "0.0.1",
   "description": "参数化面板uform的checkbox标签",
   "main": "dist/index.js",
