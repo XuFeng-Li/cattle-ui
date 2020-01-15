@@ -9,23 +9,29 @@ import svgr from '@svgr/rollup';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import { terser } from "rollup-plugin-terser";
+import path from 'path';
+const cwd = process.cwd()
+const pkgPath = path.resolve(cwd, './package.json');
+const pkg = require(pkgPath)
+const mainPkg = require('./package.json')
 
-import pkg from './package.json';
-
-const externals = [...Object.keys(pkg.peerDependencies)];
+const externals = [
+  ...Object.keys(pkg.peerDependencies || {}),
+  ...Object.keys(pkg.dependencies || {}),
+];
 
 export default {
     input: 'src/index.js',
     external: externals,  // 需要处理成外部包引用列表
     output: [
       {
-        file: pkg.main,
+        file: mainPkg.main,
         format: 'cjs', // 输出文件格式为CommonJS
         sourcemap: true,
       },
-      { file: pkg.min, format: "cjs", plugins: [terser()] },
+      { file: mainPkg.min, format: "cjs", plugins: [terser()] },
       {
-        file: pkg.module,
+        file: mainPkg.module,
         format: 'es',
         sourcemap: true
       }

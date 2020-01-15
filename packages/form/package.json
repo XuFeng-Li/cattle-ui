@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "信息展示",
   "main": "dist/index.js",
+  "module": "dist/es/index.es.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c ../../rollup.config.js",
+    "module": "dist/es/index.es.js",
     "rollup": "rollup -c"
   },
   "author": "",
@@ -15,6 +17,12 @@
     "antd"
   ],
   "dependencies": {
+    "prop-types": "^15.7.2",
     "cattle-util": "^1.0.5"
+  },
+  "peerDependencies": {
+    "antd": "^3.35.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }

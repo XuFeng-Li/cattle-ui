@@ -1,7 +1,7 @@
 {
-  "name": "cattle-upload",
-  "version": "1.0.8",
-  "description": "'基於antd的上传组件'",
+  "name": "cattle-panelImgRadio",
+  "version": "0.0.1",
+  "description": "参数化面板uform的九宫格组件，用于配置起铺点",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
   "scripts": {
@@ -9,16 +9,11 @@
     "build": "rollup -c ../../rollup.config.js",
     "rollup": "rollup -c"
   },
-  "author": "",
+  "author": "xiachi",
   "license": "ISC",
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "cattle-util": "^1.0.5"
-  },
-  "peerDependencies": {
-    "antd": "^3.35.3",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "cattle-util": "^1.0.5",
+    "classnames": "^2.2.6"
   }
 }
