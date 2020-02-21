@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from 'prop-types';
 import { isStr, simplifyFileName, trim, isFn } from "cattle-util";
-import addonHoc from './common/addon';
+import addonHoc from './common/addon/index';
 import { InputNumber } from "antd";
 import styles from './index.less';
 
