@@ -16,6 +16,10 @@ const mockData = [
     name: "族1"
   }
 ];
+
+const mockDataRes = {
+}
+
 const mockSchema = {
   type: "object",
   properties: {
