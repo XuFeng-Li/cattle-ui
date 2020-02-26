@@ -8,10 +8,11 @@ const PanelForm = (props) => {
   const { schema, ...others } = props
   return (
     <SchemaForm 
-      {...others}
-      fields={fields}
       labelCol={4}
       wrapperCol={16}
+      {...others}
+      fields={fields}
+      
       schema={schema}
     >
       <Submit >修改</Submit>
