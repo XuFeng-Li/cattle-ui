@@ -6,8 +6,9 @@
   "min": "dist/index.min.js",
   "module": "dist/es/index.es.js",
   "dependencies": {
-    "@uform/antd": "^1.0.0-rc.0",
-    "@uform/react": "^1.0.0-rc.0",
+    "@uform/antd": "^1.0.0",
+    "@uform/react": "^1.0.0",
+    "@uform/react-schema-renderer": "^1.0.0",
     "antd": "^3.25.3",
     "cattle-info": "^1.0.1",
     "cattle-upload": "^1.0.4",
@@ -82,16 +83,5 @@
     "ts-import-plugin": "^1.6.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.3"
-  },
-  "peerDependencies": {
-    "@uform/antd": "^1.0.0",
-    "@uform/react": "^1.0.0",
-    "@uform/react-schema-renderer": "^1.0.0",
-    "antd": "^3.35.3",
-    "cattle-util": "^1.0.5",
-    "moment": "^2.24.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
   }
 }
