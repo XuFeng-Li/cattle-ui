@@ -154,7 +154,6 @@ export const isEmptyArr = (list) => {
   return list.every(ele => isEmpty(ele));
 }
 
-
 export const filterRender = (val, children) => {
   return isEmpty(val) ? '--' :  children || val
 }
