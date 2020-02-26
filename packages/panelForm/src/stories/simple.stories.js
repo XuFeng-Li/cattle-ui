@@ -198,39 +198,40 @@ storiesOf("PanelForm", module)
       setSchema(mockSchema2);
     };
     useEffect(() => {
-      fetcher.get('/admin/scheme/family/category_query',{
-        params: {
-          source: 1
-        }
-      })
-      .then((res) => {
-        console.log("category res: ", res)
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-        setList(mockData)
-      })
+      setList(mockData)
+      // fetcher.get('/admin/scheme/family/category_query',{
+      //   params: {
+      //     source: 1
+      //   }
+      // })
+      // .then((res) => {
+      //   console.log("category res: ", res)
+      // })
+      // .catch(function (error) {
+      //   // handle error
+      //   console.log(error);
+      //   setList(mockData)
+      // })
 
-      fetcher.post('/admin/scheme/scheme_family/param',{
-        body: {
-          familyCode: 'BM-XT-SM-0004',
-          schemeId: 0,
-          source: 2
-        }
-      })
-      .then((res) => {
-        console.log("panel res: ", res)
-        const data = {
-          type: 'object',
-          properties: res.data.result.properties
-        }
-        setSchema(data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
+      // fetcher.post('/admin/scheme/scheme_family/param',{
+      //   body: {
+      //     familyCode: 'BM-XT-SM-0004',
+      //     schemeId: 0,
+      //     source: 2
+      //   }
+      // })
+      // .then((res) => {
+      //   console.log("panel res: ", res)
+      //   const data = {
+      //     type: 'object',
+      //     properties: res.data.result.properties
+      //   }
+      //   setSchema(data);
+      // })
+      // .catch(function (error) {
+      //   // handle error
+      //   console.log(error);
+      // })
     }, []);
     return (
       <>

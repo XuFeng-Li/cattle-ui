@@ -13,7 +13,7 @@ storiesOf('PanelSelect', module)
       sidebar: Usage,
     },
   })
-  .add('simple', () => {
+  .add('copysimple', () => {
     return <PanelSelect>
       <PanelSelect.Option key="1">1</PanelSelect.Option>
       <PanelSelect.Option key="2">2</PanelSelect.Option>
