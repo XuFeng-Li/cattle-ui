@@ -1,6 +1,6 @@
 {
   "name": "cattle-form",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "信息展示",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -17,7 +17,7 @@
     "antd"
   ],
   "dependencies": {
-    "cattle-util": "^1.0.8",
+    "cattle-util": "^1.0.9",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
