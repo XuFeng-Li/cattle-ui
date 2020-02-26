@@ -6,7 +6,14 @@ import axios from "axios";
 import PanelForm from "../index";
 import Readme from "../README.md";
 import Usage from "../USAGE.md";
-
+let fetcher = axios.create({
+  method: 'post',
+  baseURL: 'http://192.168.2.131:18081',
+  headers: {
+    'Content-Type': 'application/json',
+    'x-application-type': '3'
+  }
+})
 const Option = Select.Option;
 
 const mockData = [
@@ -191,7 +198,39 @@ storiesOf("PanelForm", module)
       setSchema(mockSchema2);
     };
     useEffect(() => {
-      setList(mockData);
+      fetcher.get('/admin/scheme/family/category_query',{
+        params: {
+          source: 1
+        }
+      })
+      .then((res) => {
+        console.log("category res: ", res)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+        setList(mockData)
+      })
+
+      fetcher.get('/admin/scheme/scheme_family/param',{
+        params: {
+          familyCode: 'BM-XT-SM-0004',
+          schemeId: 0,
+          source: 2
+        }
+      })
+      .then((res) => {
+        console.log("panel res: ", res)
+        const data = {
+          type: 'object',
+          properties: res.data.result.properties
+        }
+        setSchema(data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
     }, []);
     return (
       <>
