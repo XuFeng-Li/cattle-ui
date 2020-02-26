@@ -5,7 +5,7 @@
   "command": {
     "publish": {
       "message": "chore(release): publish %s",
-      "ignoreChanges": ["eslint/**", "package.json"]
+      "ignoreChanges": ["eslint/**"]
     },
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
