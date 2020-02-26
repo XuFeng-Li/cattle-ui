@@ -6,7 +6,7 @@ import PanelInputNumber from 'cattle-panel-inputnumber'
 import PanelImgRadio from 'cattle-panel-imgradio'
 import PanelSudoku from 'cattle-panel-sudoku'
 import PanelSwitch from 'cattle-panel-switch'
-import 'cattle-panel-select/dist/css/bundle.css'
+import 'cattle-panel-select/dist/css/bundle.css' // TODO: 为什么会走style-loader
 // import 'cattle-panel-input/dist/css/bundle.css'
 import 'cattle-panel-inputnumber/dist/css/bundle.css'
 import 'cattle-panel-imgradio/dist/css/bundle.css'

@@ -84,8 +84,9 @@
     "typescript": "^3.7.3"
   },
   "peerDependencies": {
-    "@uform/antd": "^1.0.0-rc.0",
-    "@uform/react": "^1.0.0-rc.0",
+    "@uform/antd": "^1.0.0",
+    "@uform/react": "^1.0.0",
+    "@uform/react-schema-renderer": "^1.0.0",
     "antd": "^3.35.3",
     "cattle-util": "^1.0.5",
     "moment": "^2.24.0",

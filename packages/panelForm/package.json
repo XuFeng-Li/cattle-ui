@@ -23,9 +23,9 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "@uform/antd": "^1.0.0-rc.0",
-    "@uform/react": "^1.0.0-rc.0",
-    "@uform/react-schema-renderer": "^1.0.0-rc.0",
+    "@uform/antd": "^1.0.0",
+    "@uform/react": "^1.0.0",
+    "@uform/react-schema-renderer": "^1.0.0",
     "antd": "^3.35.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
