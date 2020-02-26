@@ -11,7 +11,7 @@
   },
   "author": "xiachi",
   "license": "ISC",
-  "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
+  "gitHead": "0ca423afc826597f34a95afe8533a9bf817082c7",
   "dependencies": {
     "cattle-util": "^1.0.7",
     "prop-types": "^15.7.2"

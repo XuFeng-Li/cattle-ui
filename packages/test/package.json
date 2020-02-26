@@ -11,7 +11,7 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "803b4eb3987f884254e6d77a46e591c4abd45f28",
+  "gitHead": "0ca423afc826597f34a95afe8533a9bf817082c7",
   "dependencies": {
     "cattle-upload": "^1.0.10",
     "cattle-util": "^1.0.7",
