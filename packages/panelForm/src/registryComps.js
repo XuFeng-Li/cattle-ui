@@ -1,8 +1,8 @@
 import React from "react"
 import { registerFormField, connect } from "@uform/react-schema-renderer"
-import PanelSelect from 'cattle-panelSelect'
-import PanelInput from 'cattle-panelInput'
-import PanelInputNumber from 'cattle-panelInputNumber'
+import PanelSelect from 'cattle-panel-select'
+import PanelInput from 'cattle-panel-input'
+import PanelInputNumber from 'cattle-panel-inputNumber'
 
 registerFormField(
   "panelInput",

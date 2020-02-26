@@ -212,8 +212,8 @@ storiesOf("PanelForm", module)
         setList(mockData)
       })
 
-      fetcher.get('/admin/scheme/scheme_family/param',{
-        params: {
+      fetcher.post('/admin/scheme/scheme_family/param',{
+        body: {
           familyCode: 'BM-XT-SM-0004',
           schemeId: 0,
           source: 2

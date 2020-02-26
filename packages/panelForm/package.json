@@ -13,9 +13,12 @@
   "license": "ISC",
   "gitHead": "86b2d9dfe8df86b0ea42e18e88487633c87b9145",
   "dependencies": {
-    "cattle-panelInput": "^0.1.0",
-    "cattle-panelInputNumber": "^0.1.0",
-    "cattle-panelSelect": "^0.1.0",
+    "cattle-panel-input": "^0.1.0",
+    "cattle-panel-inputnumber": "^0.1.0",
+    "cattle-panel-select": "^0.1.0",
+    "cattle-panel-imgradio": "^0.1.0",
+    "cattle-panel-sudoku": "^0.1.0",
+    "cattle-panel-switch": "^0.1.0",
     "cattle-util": "^1.0.7",
     "prop-types": "^15.7.2"
   },
