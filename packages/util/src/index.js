@@ -149,6 +149,7 @@ export const isEmpty = (val) => {
   }
 }
 
+
 export const isEmptyArr = (list) => {
   if(!isArr(list)) return;
   return list.every(ele => isEmpty(ele));
