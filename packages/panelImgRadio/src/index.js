@@ -47,6 +47,7 @@ class ImgRadio extends React.PureComponent {
       [styles['radio-list']]: true,
       [className]: true
     })
+    
     return (
       <ul className={UlClass} {...other}>
         {dataSource.map((item, index) => {

@@ -5,7 +5,6 @@ import addonHoc from './common/addon/index';
 import { InputNumber } from "antd";
 import styles from './index.less';
 
-
 const PanelInputNumber = addonHoc(InputNumber)
 PanelInputNumber.propTypes = {
   /**

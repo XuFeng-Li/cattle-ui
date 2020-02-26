@@ -97,5 +97,4 @@ class Sudoko extends React.PureComponent {
     )
   }
 }
-
 export default Sudoko
