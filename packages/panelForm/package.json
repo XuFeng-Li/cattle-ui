@@ -1,6 +1,6 @@
 {
   "name": "cattle-panelForm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "参数化面板组件",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -13,10 +13,10 @@
   "license": "ISC",
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
-    "cattle-panelInput": "^0.0.2",
-    "cattle-panelInputNumber": "^0.0.2",
-    "cattle-panelSelect": "^0.0.2",
-    "cattle-util": "^1.0.6",
+    "cattle-panelInput": "^0.0.3",
+    "cattle-panelInputNumber": "^0.0.3",
+    "cattle-panelSelect": "^0.0.3",
+    "cattle-util": "^1.0.7",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
