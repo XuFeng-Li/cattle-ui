@@ -1,6 +1,6 @@
 {
   "name": "cattle-panelSelect",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "参数化面板uform的select组件",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -13,8 +13,8 @@
   "license": "ISC",
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "cattle-util": "^1.0.5"
+    "cattle-util": "^1.0.6",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "@uform/antd": "^1.0.0-rc.0",

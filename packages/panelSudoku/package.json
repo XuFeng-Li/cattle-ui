@@ -1,6 +1,6 @@
 {
   "name": "cattle-panelSudoku",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "参数化面板uform的九宫格组件，用于配置起铺点",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "gitHead": "fc06422b571ddefa1cba43235047868993fd7e71",
   "dependencies": {
-    "cattle-util": "^1.0.5",
+    "cattle-util": "^1.0.6",
     "classnames": "^2.2.6",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2"

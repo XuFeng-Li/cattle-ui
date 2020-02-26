@@ -1,6 +1,6 @@
 {
   "name": "test-ts-zlb",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "TypeScript TEST",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -15,10 +15,9 @@
     "build:watch": "rollup -cw"
   },
   "license": "ISC",
-  "devDependencies": {},
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "cattle-util": "^1.0.5"
+    "cattle-util": "^1.0.6",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "antd": "^3.35.3",

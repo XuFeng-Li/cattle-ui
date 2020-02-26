@@ -1,6 +1,6 @@
 {
   "name": "cattle-util",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "'打包测试'",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",

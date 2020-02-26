@@ -1,10 +1,20 @@
-0 silly argv { _: [ 'run' ],
-0 silly argv   lernaVersion: '3.19.0',
-0 silly argv   '$0': 'lerna',
-0 silly argv   script: 'build' }
-1 notice cli v3.19.0
-2 verbose rootPath /Users/xiachi/workDir/cattle-ui
-3 info versioning independent
-4 error JSONError: Unexpected token } in JSON at position 288 while parsing near '...up": "rollup -c",  },  "author": "", ...' in packages/info/package.json
-4 error     at module.exports (/Users/xiachi/workDir/cattle-ui/node_modules/parse-json/index.js:26:19)
-4 error     at parse (/Users/xiachi/workDir/cattle-ui/node_modules/load-json-file/index.js:15:9)
+111 error Error: Command failed: git add -- packages/util/package.json packages/util/package-lock.json packages/form/package.json packages/form/package-lock.json packages/panelInput/package.json packages/panelInput/package-lock.json packages/info/package.json packages/info/package-lock.json packages/panelImgRadio/package.json packages/panelImgRadio/package-lock.json packages/panelSwitch/package.json packages/panelSwitch/package-lock.json packages/panelSelect/package.json packages/panelSelect/package-lock.json packages/panelInputNumber/package.json packages/panelInputNumber/package-lock.json packages/panelSudoku/package.json packages/panelSudoku/package-lock.json packages/panelForm/package.json packages/panelForm/package-lock.json packages/test_ts/package.json packages/test_ts/package-lock.json packages/upload/package.json packages/upload/package-lock.json packages/regExp/package.json packages/regExp/package-lock.json packages/test/package.json packages/test/package-lock.json
+111 error The following paths are ignored by one of your .gitignore files:
+111 error packages/form/package-lock.json
+111 error packages/info/package-lock.json
+111 error packages/panelForm/package-lock.json
+111 error packages/panelImgRadio/package-lock.json
+111 error packages/panelInput/package-lock.json
+111 error packages/panelInputNumber/package-lock.json
+111 error packages/panelSelect/package-lock.json
+111 error packages/panelSudoku/package-lock.json
+111 error packages/panelSwitch/package-lock.json
+111 error packages/regExp/package-lock.json
+111 error packages/test/package-lock.json
+111 error packages/test_ts/package-lock.json
+111 error packages/upload/package-lock.json
+111 error packages/util/package-lock.json
+111 error Use -f if you really want to add them.
+111 error
+111 error     at makeError (/Users/xiachi/workDir/cattle-ui/node_modules/execa/index.js:174:9)
+111 error     at Promise.all.then.arr (/Users/xiachi/workDir/cattle-ui/node_modules/execa/index.js:278:16)
