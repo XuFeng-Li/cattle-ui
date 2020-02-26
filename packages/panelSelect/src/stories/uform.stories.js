@@ -7,6 +7,7 @@ import PanelSelect from "../index";
 import Readme from "../README.md";
 import Usage from "../USAGE.md";
 
+
 // 正常为 'string'
 registerFormField(
   "PanelSelect",
