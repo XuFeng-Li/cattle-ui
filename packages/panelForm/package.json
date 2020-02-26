@@ -1,6 +1,6 @@
 {
   "name": "cattle-panel-form",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "参数化面板组件",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
