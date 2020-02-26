@@ -1,6 +1,6 @@
 {
   "name": "testzlb1",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "'打包测试'",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -13,10 +13,10 @@
   "license": "ISC",
   "gitHead": "0ca423afc826597f34a95afe8533a9bf817082c7",
   "dependencies": {
-    "cattle-upload": "^1.0.10",
-    "cattle-util": "^1.0.7",
+    "cattle-upload": "^1.0.11",
+    "cattle-util": "^1.0.8",
     "prop-types": "^15.7.2",
-    "test-ts-zlb": "^0.0.7"
+    "test-ts-zlb": "^0.0.8"
   },
   "peerDependencies": {
     "antd": "^3.35.3",
