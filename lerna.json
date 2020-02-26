@@ -5,7 +5,7 @@
   "command": {
     "publish": {
       "message": "chore(release): publish %s",
-      "npmClientArgs": ["--no-package-lock"]
+      "ignoreChanges": ["package-lock.json"]
     },
     "bootstrap": {
       "npmClientArgs": ["--no-package-lock"]
