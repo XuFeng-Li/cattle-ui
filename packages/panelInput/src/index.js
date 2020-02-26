@@ -6,6 +6,7 @@ import { Input } from "antd";
 const PanelInput = props => {
   return <Input {...props} />;
 };
+
 PanelInput.propTypes = {
   /**
    * 自定义前缀 
