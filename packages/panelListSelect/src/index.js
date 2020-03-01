@@ -32,24 +32,18 @@ class ModalSelect extends React.PureComponent {
   }
 
   async componentDidUpdate(nextProps) {
-    const { categoryInfo: { code: preCode} } = this.props
-    const { categoryInfo: { code: currentCode }} = nextProps
-    if(currentCode !== preCode ) {
+    const { propsParams: { categoryId: preId} } = this.props
+    const { propsParams: { categoryId: currentId}} = nextProps
+    if(currentId !== preId ) {
       await this.fetchCloudRaceList({})
     }
   }
 
   async fetchCloudRaceList (params) {
-    const { categoryInfo, fetcher, api } = this.props
-    const { code } = categoryInfo
-    const res = await fetcher.get(api,{
-      params:{
-        ...{
-          category: code,
-          keywords: ''
-        },
-        ...params
-      }
+    const { fetcher, api, propsParams } = this.props
+    const res = await fetcher.get(api, {
+      propsParams,
+      ...params
     })
     if(res) {
       this.setState({
@@ -120,18 +114,18 @@ class ModalSelect extends React.PureComponent {
   }
 
   render() {
-    const { categoryInfo, onChange, value, placement = 'left', ...rest } = this.props;
+    const { propsParams, onChange, value, placement = 'left', ...rest } = this.props;
     const { value: stateValue, isSelecting, cloudRaceList, cloudRaceListSearchForm } = this.state;
-    const { name } = categoryInfo
+    const { categoryName } = propsParams 
     console.log('stateValue: ', stateValue);
     const { className = "", ...other } = rest;
     const containerCs = cs({
-      container: true,
+      [styles["container"]]: true,
       [className]: true
     });
-    let displayName = name
+    let displayName = categoryName
     if(stateValue !== null) {
-      displayName = `${name}(${stateValue.itemInfo.name})`
+      displayName = `${categoryName}(${stateValue.itemInfo.name})`
     }
     return (
       <div className={containerCs} {...other}>

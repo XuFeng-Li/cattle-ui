@@ -38,10 +38,11 @@ storiesOf("PanelListSelect", module)
               type: "string",
               "x-component": "PanelListSelect",
               "x-props": {
-                fetcher: '',
+                fetcher: fetcher,
                 api: '/admin/scheme/family/category_query',
-                categoryInfo: {
-                  name: '踢脚线'
+                propsParams: {
+                  categoryName: '踢脚线',
+                  categoryId: 861
                 },
                 placement: 'left'
               },
