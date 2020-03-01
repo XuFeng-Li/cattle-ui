@@ -16,7 +16,9 @@
     "url": "git@code.aliyun.com:frontend-biz/cattle-ui.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c ../../rollup.config.js",
+    "rollup": "rollup -c"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
