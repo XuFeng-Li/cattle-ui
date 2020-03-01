@@ -1,35 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { registerFormField, connect } from "@uform/react-schema-renderer";
+import { trim, beforeTrim } from "cattle-util";
+import { SchemaForm, mapStyledProps, mapTextComponent } from "@uform/antd";
+import fetcher from '../mockFetcher/fetch.js'
 import { storiesOf } from "@storybook/react";
-import {
-  registerFormField,
-  registerVirtualBox,
-  connect
-} from "@uform/react-schema-renderer";
-import {
-  SchemaForm,
-  Submit,
-  mapStyledProps,
-  mapTextComponent
-} from "@uform/antd";
-import "antd/dist/antd.css";
-import PanelFormCard from "../index";
+import PanelSudoku from "../index";
 import Readme from "../README.md";
 import Usage from "../USAGE.md";
 
-const Card = ({ children, ...props }) => {
-  return (
-    <PanelFormCard {...props.schema.getExtendsComponentProps()}>
-      {children}
-    </PanelFormCard>
-  );
-};
-// 全局注册
-// registerVirtualBox(
-//   'panelFormCard',
-//   Card
-// )
+// 正常为 'string'
+registerFormField(
+  "PanelListSelect",
+  connect({
+    getProps: (outputProps, fieldProps) => {
+     
+    },
+  })(PanelSudoku)
+);
 
-storiesOf("PanelFormCard", module)
+storiesOf("PanelListSelect", module)
   .addParameters({
     readme: {
       codeTheme: "duotone-sea",
@@ -37,44 +26,26 @@ storiesOf("PanelFormCard", module)
       sidebar: Usage
     }
   })
-  .add("simple", () => {
+  .add("uform", () => {
     return (
       <SchemaForm
-        virtualFields={{
-          card: Card
-        }}
         labelCol={4}
         wrapperCol={16}
         schema={{
           type: "object",
-          // properties: {
-          //   length: {
-          //     type: "string",
-          //     "x-component": "PanelInput",
-          //     "x-props": {
-          //       "addonBefore": '平方米',
-          //       "addonAfter": '平方米',
-          //     },
-          //     title: "长度"
-          //   }
-          // },
           properties: {
-            xxx: {
-              type: "object",
-              "x-component": "card",
+            line: {
+              type: "string",
+              "x-component": "PanelListSelect",
               "x-props": {
-                title: "基本信息"
-              },
-              properties: {
-                ddd2: {
-                  type: "string",
-                  title: "字段5"
+                fetcher: '',
+                api: '/admin/scheme/family/category_query',
+                categoryInfo: {
+                  name: '踢脚线'
                 },
-                eee2: {
-                  type: "string",
-                  title: "字段6"
-                }
-              }
+                placement: 'left'
+              },
+              title: "选择线条"
             }
           }
         }}

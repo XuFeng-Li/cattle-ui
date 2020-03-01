@@ -1,6 +1,6 @@
 import React from "react";
 import { Input, Select, Pagination, Form } from "antd";
-import CloudRaceItem from "components/CloudRaceItem/index";
+import Item from "./item";
 import styles from "./list.less";
 
 const Search = Input.Search
@@ -57,7 +57,7 @@ class CloudRaceList extends React.PureComponent {
             {(list || []).map((item, index) => {
               return (
                 <li key={item.id}>
-                  <CloudRaceItem item={item} onClick={onItemClick} />
+                  <Item item={item} onClick={onItemClick} />
                 </li>
               );
             })}

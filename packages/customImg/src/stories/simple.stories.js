@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
-import { InputButton } from '../index';
+import CustomImg from '../index';
 import Readme from '../README.md';
 import Usage from '../USAGE.md';
 
-storiesOf('Test_ts', module)
+
+storiesOf('CustomImg', module)
   .addParameters({
     readme: {
       codeTheme: 'duotone-sea',
@@ -13,4 +13,6 @@ storiesOf('Test_ts', module)
       sidebar: Usage,
     },
   })
-  .add('Button', () => <InputButton label={'Hello Im Button'}>1221</InputButton>)
+  .add('simple', () => {
+    return <CustomImg /> 
+  })

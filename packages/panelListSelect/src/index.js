@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon, Drawer } from 'antd';
 import cs from "classnames";
-import CloudRaceList from "components/CloudRaceList/index";
+import List from "./list";
 import styles from "./index.less";
 
 
@@ -161,7 +161,7 @@ class ModalSelect extends React.PureComponent {
             width="328px"
             bodyStyle={{paddingTop: 0, height: 'calc(100% - 56px)'}}
           >
-            <CloudRaceList 
+            <List
               data={cloudRaceList}
               cloudRaceListSearchForm={cloudRaceListSearchForm}
               onFormSubmit={this.cloudRaceFormSubmit}

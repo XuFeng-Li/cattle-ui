@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomImg from 'components/CustomImg'
+import CustomImg from 'cattle-custom-img'
 import styles from './item.less'
 
 const CloudRaceItem = (props) => {
