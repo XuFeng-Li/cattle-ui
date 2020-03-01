@@ -1,9 +1,9 @@
 {
-  "name": "panel-form-card",
+  "name": "panel-form-list-select",
   "version": "0.1.0",
-  "description": "基于antd的card的布局类组件",
+  "description": "唤起list面板的列表选择组件",
   "keywords": [
-    "card"
+    "list"
   ],
   "author": "xuhuiyuan <xhy@asman.com.cn>",
   "homepage": "",

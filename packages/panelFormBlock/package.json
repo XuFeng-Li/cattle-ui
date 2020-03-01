@@ -1,9 +1,9 @@
 {
-  "name": "panel-form-card",
+  "name": "panel-form-block",
   "version": "0.1.0",
-  "description": "基于antd的card的布局类组件",
+  "description": "基于antd的block布局类组件",
   "keywords": [
-    "card"
+    "block"
   ],
   "author": "xuhuiyuan <xhy@asman.com.cn>",
   "homepage": "",
