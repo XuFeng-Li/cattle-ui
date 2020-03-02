@@ -9,6 +9,7 @@ import {
 import { fields, virtualFields } from "./registryComps";
 import styles from "./index.less";
 
+
 const PanelForm = props => {
   const { schema, children, fetcher, ...others } = props;
   return (

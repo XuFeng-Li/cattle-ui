@@ -76,6 +76,7 @@ export const fields = {
   "PanelImgRadio": PanelImgRadioField,
   "PanelSudoku": PanelSudokuField,
   "PanelSwitch": PanelSwitchField,
+  "PanelListSelect": PanelListSelect,
 }
 export const virtualFields = {
   "card": PanelCard,
