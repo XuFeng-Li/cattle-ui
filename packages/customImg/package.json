@@ -1,6 +1,6 @@
 {
   "name": "cattle-custom-img",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "自定义img组件",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",

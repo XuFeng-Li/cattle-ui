@@ -1,6 +1,6 @@
 {
   "name": "cattle-panel-list-select",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "唤起list面板的列表选择组件",
   "keywords": [
     "list"
@@ -19,8 +19,8 @@
     "rollup": "rollup -c"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "cattle-custom-img": "^0.1.0"
+    "cattle-custom-img": "^0.1.1",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "@uform/antd": "^1.0.0",
