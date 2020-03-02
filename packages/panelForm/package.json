@@ -11,7 +11,6 @@
   },
   "author": "xiachi",
   "license": "ISC",
-  "gitHead": "86b2d9dfe8df86b0ea42e18e88487633c87b9145",
   "dependencies": {
     "cattle-panel-block": "^0.1.2",
     "cattle-panel-card": "^0.1.2",
