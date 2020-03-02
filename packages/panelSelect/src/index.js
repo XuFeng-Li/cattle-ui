@@ -44,7 +44,7 @@ PanelSelect.propTypes = {
 };
 PanelSelect.defaultProps = {
   addonBefore: "",
-  addonAfter: "mm"
+  addonAfter: ""
 };
 
 

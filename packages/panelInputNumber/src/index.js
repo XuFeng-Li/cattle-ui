@@ -17,7 +17,7 @@ PanelInputNumber.propTypes = {
   addonAfter: PropTypes.string.isRequired,
 }
 PanelInputNumber.defaultProps = {
-  addonBefore: 'mm',
-  addonAfter: 'mm'
+  addonBefore: '',
+  addonAfter: ''
 }
 export default PanelInputNumber;
