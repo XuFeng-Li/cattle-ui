@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { storiesOf } from "@storybook/react";
 import { Select } from "antd";
+import { SchemaForm, Field, FormItemGrid, Submit } from "@uform/antd";
 import "antd/dist/antd.css";
 import axios from "axios";
 import PanelForm from "../index";
@@ -21,6 +22,11 @@ const mockData = [
     code: "1",
     key: "1",
     name: "族1"
+  },
+  {
+    code: "2",
+    key: "2",
+    name: "族2"
   }
 ];
 
@@ -195,7 +201,12 @@ storiesOf("PanelForm", module)
     };
     const selectChange = value => {
       console.log("value: ", value);
-      setSchema(mockSchema2);
+      if(value === '1') {
+        setSchema(mockSchema);
+      } else {
+        setSchema(mockSchema2);
+      } 
+      
     };
     useEffect(() => {
       setList(mockData)
@@ -249,7 +260,9 @@ storiesOf("PanelForm", module)
         </div>
         <div>
           <h2> 配置面板</h2>
-          <PanelForm onSubmit={onSubmit} schema={schema} />
+          <PanelForm onSubmit={onSubmit} schema={schema} >
+            <Submit className="form-submit">修改</Submit>
+          </PanelForm>
         </div>
       </>
     );

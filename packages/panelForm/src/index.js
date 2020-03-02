@@ -5,7 +5,7 @@ import { fields } from './registryComps'
 import styles from "./index.less";
 
 const PanelForm = (props) => {
-  const { schema, ...others } = props
+  const { schema, children, ...others } = props
   return (
     <SchemaForm 
       labelCol={4}
@@ -15,7 +15,7 @@ const PanelForm = (props) => {
       
       schema={schema}
     >
-      <Submit >修改</Submit>
+      {children}
     </SchemaForm>
   );
 };
