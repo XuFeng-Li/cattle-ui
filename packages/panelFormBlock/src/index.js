@@ -1,11 +1,14 @@
 import React from 'react'
-import { Card } from 'antd'
-
-const PanelFormBlock = (props) => {
-  return({children,...props})=>{
-    return <Card {...props.schema.getExtendsComponentProps()}>{children}</Card>
-  }
-};
+import styles from './index.less'
+const PanelFormBlock = ({children,...props})=>{
+  const { title } = props.schema.getExtendsComponentProps()
+  return <div className={styles["block__container"]}>
+    <div className={styles["block__header"]}>{title}</div>
+    <div className={styles["block__body"]}>
+      {children}
+    </div>
+  </div>
+}
 
 PanelFormBlock.propTypes = {
   

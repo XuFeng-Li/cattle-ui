@@ -6,12 +6,17 @@ import PanelInputNumber from 'cattle-panel-inputnumber'
 import PanelImgRadio from 'cattle-panel-imgradio'
 import PanelSudoku from 'cattle-panel-sudoku'
 import PanelSwitch from 'cattle-panel-switch'
+import PanelListSelect from 'cattle-panel-list-select'
+import PanelCard from 'cattle-panel-card'
+import PanelBlock from 'cattle-panel-block'
 import 'cattle-panel-select/dist/css/bundle.css' // TODO: 为什么会走style-loader
 // import 'cattle-panel-input/dist/css/bundle.css'
 import 'cattle-panel-inputnumber/dist/css/bundle.css'
 import 'cattle-panel-imgradio/dist/css/bundle.css'
 import 'cattle-panel-sudoku/dist/css/bundle.css'
 // import 'cattle-panel-switch/dist/css/bundle.css'
+import 'cattle-panel-list-select/dist/css/bundle.css'
+import 'cattle-panel-block/dist/css/bundle.css'
 
 const panelInputField = connect({
   getProps: (outputProps, fieldProps) => {
@@ -49,6 +54,21 @@ const PanelSwitchField = connect({
   },
 })(PanelSwitch)
 
+// const Card = ({ children, ...props }) => {
+//   return (
+//     <PanelCard {...props.schema.getExtendsComponentProps()}>
+//       {children}
+//     </PanelCard>
+//   );
+// };
+// const Block = ({ children, ...props }) => {
+//   return (
+//     <PanelBlock {...props.schema.getExtendsComponentProps()}>
+//       {children}
+//     </PanelBlock >
+//   );
+// };
+
 export const fields = {
   "panelInput": panelInputField, 
   "panelSelect": panelSelectField,
@@ -56,6 +76,10 @@ export const fields = {
   "PanelImgRadio": PanelImgRadioField,
   "PanelSudoku": PanelSudokuField,
   "PanelSwitch": PanelSwitchField,
+}
+export const virtualFields = {
+  "card": PanelCard,
+  "block": PanelBlock
 }
 // registerFormField(
 //   "panelInput",

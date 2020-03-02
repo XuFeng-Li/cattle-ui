@@ -12,24 +12,18 @@ import {
   mapTextComponent
 } from "@uform/antd";
 import "antd/dist/antd.css";
-import PanelFormCard from "../index";
+import PanelBlock from "../index";
 import Readme from "../README.md";
 import Usage from "../USAGE.md";
 
-const Card = ({ children, ...props }) => {
-  return (
-    <PanelFormCard {...props.schema.getExtendsComponentProps()}>
-      {children}
-    </PanelFormCard>
-  );
-};
+
 // 全局注册
 // registerVirtualBox(
 //   'panelFormCard',
 //   Card
 // )
 
-storiesOf("PanelFormCard", module)
+storiesOf("PanelBlock", module)
   .addParameters({
     readme: {
       codeTheme: "duotone-sea",
@@ -41,27 +35,16 @@ storiesOf("PanelFormCard", module)
     return (
       <SchemaForm
         virtualFields={{
-          card: Card
+          block: PanelBlock
         }}
         labelCol={4}
         wrapperCol={16}
         schema={{
           type: "object",
-          // properties: {
-          //   length: {
-          //     type: "string",
-          //     "x-component": "PanelInput",
-          //     "x-props": {
-          //       "addonBefore": '平方米',
-          //       "addonAfter": '平方米',
-          //     },
-          //     title: "长度"
-          //   }
-          // },
           properties: {
             xxx: {
               type: "object",
-              "x-component": "card",
+              "x-component": "block",
               "x-props": {
                 title: "基本信息"
               },

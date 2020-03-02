@@ -1,19 +1,17 @@
 import React from 'react'
 import { Card } from 'antd'
 
-const PanelFormCard = (props) => {
-  return({children,...props})=>{
-    return <Card {...props.schema.getExtendsComponentProps()}>{children}</Card>
-  }
-};
+const PanelCard = ({children,...props})=>{
+  return <Card {...props.schema.getExtendsComponentProps()}>{children}</Card>
+}
 
-PanelFormCard.propTypes = {
+PanelCard.propTypes = {
   
 };
-PanelFormCard.defaultProps = {
+PanelCard.defaultProps = {
   
 };
 
 
 
-export default PanelFormCard
+export default PanelCard

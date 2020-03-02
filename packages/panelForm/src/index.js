@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { SchemaForm, Submit, mapStyledProps, mapTextComponent } from "@uform/antd";
-import { fields } from './registryComps'
+import { fields, virtualFields } from './registryComps'
 import styles from "./index.less";
 
 const PanelForm = (props) => {
@@ -12,7 +12,7 @@ const PanelForm = (props) => {
       wrapperCol={16}
       {...others}
       fields={fields}
-      
+      virtualFields={virtualFields}
       schema={schema}
     >
       {children}
