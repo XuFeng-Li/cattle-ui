@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { storiesOf } from "@storybook/react";
+import PanelConfigProvider from 'cattle-panel-config-provider'
+import mockFetcher from '../mockFetcher/fetch.js'
 import { Select } from "antd";
 import { SchemaForm, Field, FormItemGrid, Submit } from "@uform/antd";
 import "antd/dist/antd.css";
-import axios from "axios";
 import PanelForm from "../index";
 import Readme from "../README.md";
 import Usage from "../USAGE.md";
-let fetcher = axios.create({
-  method: 'post',
-  baseURL: 'http://192.168.2.131:18081',
-  headers: {
-    'Content-Type': 'application/json',
-    'x-application-type': '3'
-  }
-})
+// let fetcher = axios.create({
+//   method: 'post',
+//   baseURL: 'http://192.168.2.131:18081',
+//   headers: {
+//     'Content-Type': 'application/json',
+//     'x-application-type': '3'
+//   }
+// })
 const Option = Select.Option;
 
 const mockData = [
@@ -117,6 +118,19 @@ const mockSchema = {
       type: "string",
       "x-component": "PanelSudoku",
       title: "起铺点"
+    },
+    lines: {
+      type: "string",
+      "x-component": "PanelListSelect",
+      "x-props": {
+        api: '/admin/scheme/family/page_query',
+        propsParams: {
+          categoryName: '踢脚线',
+          categoryId: 861,
+        },
+        placement: 'right'
+      },
+      title: '线条配置'
     }
   }
 };
@@ -245,7 +259,7 @@ storiesOf("PanelForm", module)
       // })
     }, []);
     return (
-      <>
+      <PanelConfigProvider fetcher={mockFetcher}>
         <div>
           <h2>族选择</h2>
           <Select style={{ width: "200px" }} onChange={selectChange}>
@@ -260,10 +274,10 @@ storiesOf("PanelForm", module)
         </div>
         <div>
           <h2> 配置面板</h2>
-          <PanelForm onSubmit={onSubmit} schema={schema} >
+          <PanelForm onSubmit={onSubmit} schema={schema}>
             <Submit className="form-submit">修改</Submit>
           </PanelForm>
         </div>
-      </>
+      </PanelConfigProvider>
     );
   });

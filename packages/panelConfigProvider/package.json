@@ -1,0 +1,28 @@
+{
+  "name": "cattle-panel-config-provider",
+  "version": "0.1.0",
+  "description": "参数化面板uform 全局cotext 配置",
+  "main": "dist/index.js",
+  "module": "dist/es/index.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c ../../rollup.config.js",
+    "rollup": "rollup -c"
+  },
+  "author": "xiachi",
+  "license": "ISC",
+  "gitHead": "86b2d9dfe8df86b0ea42e18e88487633c87b9145",
+  "dependencies": {
+    "cattle-util": "^1.0.9",
+    "classnames": "^2.2.6",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "@uform/antd": "^1.0.0-rc.0",
+    "@uform/react": "^1.0.0-rc.0",
+    "antd": "^3.35.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
