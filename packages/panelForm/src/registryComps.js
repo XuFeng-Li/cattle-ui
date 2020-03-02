@@ -54,6 +54,12 @@ const PanelSwitchField = connect({
   },
 })(PanelSwitch)
 
+const PanelListSelectField = connect({
+  getProps: (outputProps, fieldProps) => {
+    
+  },
+})(PanelListSelect)
+
 // const Card = ({ children, ...props }) => {
 //   return (
 //     <PanelCard {...props.schema.getExtendsComponentProps()}>
@@ -76,7 +82,7 @@ export const fields = {
   "PanelImgRadio": PanelImgRadioField,
   "PanelSudoku": PanelSudokuField,
   "PanelSwitch": PanelSwitchField,
-  "PanelListSelect": PanelListSelect,
+  "PanelListSelect": PanelListSelectField,
 }
 export const virtualFields = {
   "card": PanelCard,
