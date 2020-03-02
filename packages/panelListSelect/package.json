@@ -1,6 +1,6 @@
 {
   "name": "cattle-panel-list-select",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "唤起list面板的列表选择组件",
   "keywords": [
     "list"
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "cattle-custom-img": "^0.1.1",
-    "cattle-panel-config-provider": "^0.1.0",
+    "cattle-panel-config-provider": "^0.1.1",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
