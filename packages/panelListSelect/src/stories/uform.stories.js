@@ -39,10 +39,10 @@ storiesOf("PanelListSelect", module)
               "x-component": "PanelListSelect",
               "x-props": {
                 fetcher: fetcher,
-                api: '/admin/scheme/family/category_query',
+                api: '/admin/scheme/family/page_query',
                 propsParams: {
                   categoryName: '踢脚线',
-                  categoryId: 861
+                  categoryId: 861,
                 },
                 placement: 'left'
               },
