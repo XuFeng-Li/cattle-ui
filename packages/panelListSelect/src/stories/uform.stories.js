@@ -40,7 +40,7 @@ storiesOf("PanelListSelect", module)
                 type: "string",
                 "x-component": "PanelListSelect",
                 "x-props": {
-                  api: '/admin/scheme/family/page_query',
+                  api: '/admin/scheme/family/family_query',
                   propsParams: {
                     categoryName: '踢脚线',
                     categoryId: 861,

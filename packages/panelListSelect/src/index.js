@@ -4,7 +4,6 @@ import { ConfigConsumer } from 'cattle-panel-config-provider';
 import cs from "classnames";
 import List from "./list";
 import styles from "./index.less";
-console.log('ConfigConsumer: ', ConfigConsumer);
 
 class ModalSelect extends React.PureComponent {
   static getDerivedStateFromProps(nextProps) {
@@ -46,12 +45,9 @@ class ModalSelect extends React.PureComponent {
 
   async fetchCloudRaceList(params) {
     const { fetcher, api, propsParams } = this.props;
-    console.log('fetcher: ', fetcher);
     const res = await fetcher.post(api, {
-      body: {
-        ...propsParams,
-        ...params
-      }
+      ...propsParams,
+      ...params
     });
     if (res) {
       console.log('res: ', res);
@@ -80,7 +76,6 @@ class ModalSelect extends React.PureComponent {
   };
 
   cloudRaceFormSubmit = cloudRaceListSearchForm => {
-    console.log("cloudRaceListSearchForm: ", cloudRaceListSearchForm);
     const params = {
       ...cloudRaceListSearchForm,
       pageNo: 1
