@@ -36,9 +36,9 @@ const PanelImgRadioField = connect({
   getProps: (outputProps, fieldProps) => {}
 })(PanelImgRadio);
 
-const PanelButonRadioField = connect({
+const PanelButtonRadioField = connect({
   getProps: (outputProps, fieldProps) => {}
-})(PanelButtonRadio);
+})(transformDataSourceKey(PanelButtonRadio, "options"));
 
 const PanelSudokuField = connect({
   getProps: (outputProps, fieldProps) => {}
@@ -75,7 +75,7 @@ export const fields = {
   PanelSudoku: PanelSudokuField,
   PanelSwitch: PanelSwitchField,
   PanelListSelect: PanelListSelectField,
-  PanelButonRadio: PanelButonRadioField
+  PanelButtonRadio: PanelButtonRadioField
 };
 export const virtualFields = {
   card: PanelCard,
