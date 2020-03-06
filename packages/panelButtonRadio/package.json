@@ -1,6 +1,6 @@
 {
   "name": "cattle-panel-buttonradio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "button radio",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
