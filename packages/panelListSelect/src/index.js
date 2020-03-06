@@ -7,6 +7,7 @@ import styles from "./index.less";
 
 class ModalSelect extends React.PureComponent {
   static getDerivedStateFromProps(nextProps) {
+    console.log('nextProps: ', nextProps);
     if ("value" in nextProps) {
       return {
         value: nextProps.value || null

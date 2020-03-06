@@ -1,0 +1,19 @@
+{
+  "name": "cattle-panel-buttonradio",
+  "version": "0.1.0",
+  "description": "button radio",
+  "main": "dist/index.js",
+  "module": "dist/es/index.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c ../../rollup.config.js",
+    "rollup": "rollup -c"
+  },
+  "author": "xiachi",
+  "license": "ISC",
+  "gitHead": "86b2d9dfe8df86b0ea42e18e88487633c87b9145",
+  "dependencies": {
+    "cattle-util": "^1.0.9",
+    "classnames": "^2.2.6"
+  }
+}

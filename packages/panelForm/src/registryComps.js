@@ -1,64 +1,56 @@
-import React from "react"
-import { registerFormField, connect } from "@uform/react-schema-renderer"
-import PanelSelect from 'cattle-panel-select'
-import PanelInput from 'cattle-panel-input'
-import PanelInputNumber from 'cattle-panel-inputnumber'
-import PanelImgRadio from 'cattle-panel-imgradio'
-import PanelSudoku from 'cattle-panel-sudoku'
-import PanelSwitch from 'cattle-panel-switch'
-import PanelListSelect from 'cattle-panel-list-select'
-import PanelCard from 'cattle-panel-card'
-import PanelBlock from 'cattle-panel-block'
-import 'cattle-panel-select/dist/css/bundle.css' // TODO: 为什么会走style-loader
+import React from "react";
+import { registerFormField, connect } from "@uform/react-schema-renderer";
+import { transformDataSourceKey } from "./utils.js";
+import PanelSelect from "cattle-panel-select";
+import PanelInput from "cattle-panel-input";
+import PanelInputNumber from "cattle-panel-inputnumber";
+import PanelImgRadio from "cattle-panel-imgradio";
+import PanelButtonRadio from "cattle-panel-buttonradio";
+import PanelSudoku from "cattle-panel-sudoku";
+import PanelSwitch from "cattle-panel-switch";
+import PanelListSelect from "cattle-panel-list-select";
+import PanelCard from "cattle-panel-card";
+import PanelBlock from "cattle-panel-block";
+import "cattle-panel-select/dist/css/bundle.css"; // TODO: 为什么会走style-loader
 // import 'cattle-panel-input/dist/css/bundle.css'
-import 'cattle-panel-inputnumber/dist/css/bundle.css'
-import 'cattle-panel-imgradio/dist/css/bundle.css'
-import 'cattle-panel-sudoku/dist/css/bundle.css'
+import "cattle-panel-inputnumber/dist/css/bundle.css";
+import "cattle-panel-imgradio/dist/css/bundle.css";
+import "cattle-panel-sudoku/dist/css/bundle.css";
 // import 'cattle-panel-switch/dist/css/bundle.css'
-import 'cattle-panel-list-select/dist/css/bundle.css'
-import 'cattle-panel-block/dist/css/bundle.css'
+import "cattle-panel-list-select/dist/css/bundle.css";
+import "cattle-panel-block/dist/css/bundle.css";
 
 const panelInputField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelInput)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelInput);
 
 const PanelInputNumberField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelInputNumber)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelInputNumber);
 
 const panelSelectField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelSelect)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelSelect);
 
 const PanelImgRadioField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelImgRadio)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelImgRadio);
+
+const PanelButonRadioField = connect({
+  getProps: (outputProps, fieldProps) => {}
+})(PanelButtonRadio);
 
 const PanelSudokuField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelSudoku)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelSudoku);
 
 const PanelSwitchField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelSwitch)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelSwitch);
 
 const PanelListSelectField = connect({
-  getProps: (outputProps, fieldProps) => {
-    
-  },
-})(PanelListSelect)
+  getProps: (outputProps, fieldProps) => {}
+})(PanelListSelect);
 
 // const Card = ({ children, ...props }) => {
 //   return (
@@ -76,23 +68,24 @@ const PanelListSelectField = connect({
 // };
 
 export const fields = {
-  "panelInput": panelInputField, 
-  "panelSelect": panelSelectField,
-  "PanelInputNumber": PanelInputNumberField,
-  "PanelImgRadio": PanelImgRadioField,
-  "PanelSudoku": PanelSudokuField,
-  "PanelSwitch": PanelSwitchField,
-  "PanelListSelect": PanelListSelectField,
-}
+  panelInput: panelInputField,
+  panelSelect: panelSelectField,
+  PanelInputNumber: PanelInputNumberField,
+  PanelImgRadio: PanelImgRadioField,
+  PanelSudoku: PanelSudokuField,
+  PanelSwitch: PanelSwitchField,
+  PanelListSelect: PanelListSelectField,
+  PanelButonRadio: PanelButonRadioField
+};
 export const virtualFields = {
-  "card": PanelCard,
-  "block": PanelBlock
-}
+  card: PanelCard,
+  block: PanelBlock
+};
 // registerFormField(
 //   "panelInput",
 //   connect({
 //     getProps: (outputProps, fieldProps) => {
-      
+
 //     },
 //   })(PanelInput)
 // );
@@ -100,7 +93,7 @@ export const virtualFields = {
 //   "panelInputNumber",
 //   connect({
 //     getProps: (outputProps, fieldProps) => {
-      
+
 //     },
 //   })(PanelInputNumber)
 // );
@@ -108,7 +101,7 @@ export const virtualFields = {
 //   "panelSelect",
 //   connect({
 //     getProps: (outputProps, fieldProps) => {
-      
+
 //     },
 //   })(PanelSelect)
 // );
@@ -117,7 +110,7 @@ export const virtualFields = {
 //   "PanelImgRadio",
 //   connect({
 //     getProps: (outputProps, fieldProps) => {
-      
+
 //     },
 //   })(PanelImgRadio)
 // );
@@ -125,7 +118,7 @@ export const virtualFields = {
 //   "PanelSudoku",
 //   connect({
 //     getProps: (outputProps, fieldProps) => {
-      
+
 //     },
 //   })(PanelSudoku)
 // );
@@ -133,7 +126,7 @@ export const virtualFields = {
 //   "PanelSwitch",
 //   connect({
 //     getProps: (outputProps, fieldProps) => {
-      
+
 //     },
 //   })(PanelSwitch)
 // );

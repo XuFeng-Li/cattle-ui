@@ -22,6 +22,7 @@
     "cattle-panel-select": "^0.1.6",
     "cattle-panel-sudoku": "^0.1.3",
     "cattle-panel-switch": "^0.1.4",
+    "cattle-panel-buttonradio": "^0.1.0",
     "cattle-util": "^1.0.9",
     "prop-types": "^15.7.2"
   },

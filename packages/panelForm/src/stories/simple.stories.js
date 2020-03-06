@@ -74,6 +74,19 @@ const mockSchema = {
       },
       title: "选择"
     },
+    buttonRadio: {
+      type: "string",
+      "x-component": "PanelButtonRadio",
+      enum: ["100", "200", "300"],
+      // "x-props": {
+      //   labelCol: 4,
+      //   wrapperCol: 10
+      // },
+      "x-props": {
+        buttonStyle: 'solid'
+      },
+      title: "buttonRadio"
+    },
     putie: {
       type: "string",
       enum: [
