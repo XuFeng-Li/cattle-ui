@@ -64,7 +64,7 @@ class ImgRadio extends React.PureComponent {
               <div className={styles["radio-item__img"]}>
                 <CustomImg src={item.img} ossProcess="x-oss-process=image/resize,m_fixed,h_72,w_72"/>
               </div>
-              <p className={styles["radio-item__desc ellipsis"]} title={item.name}>{item.name}</p>
+              <div className={`${styles["radio-item__desc"]} ellipsis`} title={item.name}>{item.name}</div>
             </li>
           )
         })}
