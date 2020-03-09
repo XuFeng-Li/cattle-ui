@@ -16,6 +16,7 @@ const PanelForm = props => {
       <SchemaForm
         labelCol={4}
         wrapperCol={16}
+        labelAlign='left'
         {...others}
         fields={fields}
         virtualFields={virtualFields}
