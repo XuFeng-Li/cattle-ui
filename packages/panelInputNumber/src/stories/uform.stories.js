@@ -12,9 +12,7 @@ import Usage from "../USAGE.md";
 registerFormField(
   "PanelInputNumber",
   connect({
-    getProps: (outputProps, fieldProps) => {
-      
-    },
+    getProps: (outputProps, fieldProps) => {}
   })(PanelInputNumber)
 );
 
@@ -38,8 +36,10 @@ storiesOf("PanelInputNumber", module)
               type: "string",
               "x-component": "PanelInputNumber",
               "x-props": {
-                "addonBefore": '平方米',
-                "addonAfter": '平方米',
+                addonBefore: "平方米",
+                addonAfter: "平方米",
+                max: 10,
+                min: 2
               },
               title: "长度"
             }

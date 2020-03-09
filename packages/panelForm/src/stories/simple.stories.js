@@ -46,8 +46,14 @@ const mockSchema = {
       // },
       "x-component-props": {
         addonBefore: "平方米",
-        addonAfter: "平方米"
+        addonAfter: "平方米",
       },
+      "x-rules": {
+        
+      },
+      // readOnly: true,
+      maximum: 10000,
+      minimum: 10,
       title: "长度"
     },
     width: {
