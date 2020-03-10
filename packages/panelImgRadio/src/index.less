@@ -1,3 +1,34 @@
+.scroll-bar-horizontal(@borderHeight: 4px, @borderColor: @grey) {
+  &::-webkit-scrollbar {
+    height: @borderHeight;
+    border-radius: @borderHeight;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: @borderHeight;
+    background-color: #fff;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: @borderColor;
+    }
+  }
+}
+
+.scroll-bar-vertical(@borderWidth: 4px, @borderColor: @grey) {
+  &::-webkit-scrollbar {
+    width: @borderWidth;
+    border-radius: @borderWidth;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: @borderWidth;
+    background-color: #fff;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: @borderColor;
+    }
+  }
+}
 @blue: #3e77f7;
 @checked-border-color: #E24747;
 ol, ul {
@@ -7,10 +38,12 @@ ol, ul {
 .radio-list {
   display: flex;
   justify-content: flex-start;
+  overflow-y: hidden;
   overflow-x: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  .scroll-bar-horizontal(4px, #aaa);
+  // &::-webkit-scrollbar {
+  //   display: none; // display会鼠标无法横向滚动
+  // }
   // flex-wrap: wrap;
   .radio-item {
     display: flex;
