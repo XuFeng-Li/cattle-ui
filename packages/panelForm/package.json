@@ -1,6 +1,6 @@
 {
   "name": "cattle-panel-form",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "参数化面板组件",
   "main": "dist/index.js",
   "module": "dist/es/index.es.js",
@@ -16,7 +16,7 @@
     "cattle-panel-buttonradio": "^0.1.1",
     "cattle-panel-card": "^0.1.2",
     "cattle-panel-config-provider": "^0.1.1",
-    "cattle-panel-imgradio": "^0.1.8",
+    "cattle-panel-imgradio": "^0.1.9",
     "cattle-panel-input": "^0.1.4",
     "cattle-panel-inputnumber": "^0.1.5",
     "cattle-panel-list-select": "^0.1.4",
