@@ -11,7 +11,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@code.aliyun.com:frontend-biz/cattle-ui.git"
+    "url": "git@github.com:XuFeng-Li/cattle-ui.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
